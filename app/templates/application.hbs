@@ -5,12 +5,13 @@
   <div class="col-md-12">
   <div class="navbar-header">
 
-    <a class="navbar-brand" href="#">Slave Voyages</a>
+    {{#link-to 'index' class="navbar-brand"}}Slave Voyages{{/link-to}}
+
   </div>
    <ul class="nav navbar-nav pull-right">
-      <li class="active"><a href="database">Databases</a></li>
+      <li>{{#link-to 'database'}}Databases{{/link-to}}</li>
       <li><a href="#">Slave Trade Assessment</a></li>
-      <li><a href="gallery">Image Gallery</a></li>
+      <li>{{#link-to 'gallery'}}Image Gallery{{/link-to}}</li>
       <li><a href="#">Education</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#" class='language-toggle'>EN</a></li>

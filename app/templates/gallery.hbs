@@ -1,1 +1,9 @@
 {{outlet}}
+
+
+Image Gallery
+
+
+{{#photo-swipe items=model as |img|}}
+  <img class="thumb" src={{img.src}} alt={{img.title}}>
+{{/photo-swipe}}
