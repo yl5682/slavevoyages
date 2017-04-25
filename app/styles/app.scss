@@ -1,5 +1,7 @@
 
 @import "ember-bootstrap/bootstrap";
+@import "materialize/materialize";
+
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -63,10 +65,11 @@ h1 {
   display: none;
   border-radius: 0px 4px 4px 0px;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  border-left: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
-  padding: 5px 0;
-  margin: 2px 0 0;
+  padding: 0 2em;
+  margin: 2px 1px 0;
   width: 600px;
 }
 
@@ -75,18 +78,15 @@ h1 {
   margin: 0;
 }
 
-.menu-canvas {
-  padding: 0 1em;
-}
-
 .menu-canvas-title {
   color: #4f4f4f;
+  font-size: 2em;
 }
 
 ul.dropdown-menu {
   a {
     height: 3em;
-    line-height: 3em;
+    line-height: 2.5em;
   }
 }
 
@@ -101,4 +101,29 @@ ul.dropdown-menu {
 
 .padding-left-none {
   padding-left: 0;
+}
+
+
+.banner-title {
+  margin: 1em 0em .5em 0;
+
+}
+
+
+span.badge {
+  float: right;
+  margin-top: .5em;
+  color: white;
+  min-width: 2rem;
+}
+
+.dropdown-menu > li > a {
+  width: 400px;
+  clear: left;
+}
+
+.badge {
+  border-radius: 0;
+  background-color: #D33A3A;
+
 }
