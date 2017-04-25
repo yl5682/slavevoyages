@@ -41,28 +41,22 @@
           <div id="submenu-v-cdrom" class="menu-canvas">
               <h3 class="menu-canvas-title">Voyage in 1999 CD-ROM</h3>
               <div class="menu-canvas-content">
-
+                <div class="menu-item-description">Whether to include voyages that were originally published in the CD-ROM format (Cambridge University Press, 1999)</div>
                 <!-- The Toggle -->
 
                 <div class="menu-canvas-element">
 
-                {{input type="checkbox" checked=cdrom-checked id="test1" class="cbx hidden"}}
-                <label for="test1" class="lbl"></label>
-                <label class="menu-canvas-element-label">Voyages in 1999 CD-ROM</label>
+                  <div class="element-container">
+                    {{input type="checkbox" checked=cdrom-checked id="test1" class="cbx hidden"}}
+                    <label for="test1" class="lbl"></label>
+                    <div class="menu-canvas-element-label">Voyages in 1999 CD-ROM {{cdrom-checked}}</div>
+                  </div>
 
 
 
-                {{cdrom-checked}}
-
-
-
-
-
-
-
-                <div>
-                    <button type="button" class="btn btn-primary">Update</button>
-                </div>
+                  <div class="element-container">
+                      <button type="button" class="btn btn-primary">Update</button>
+                  </div>
 
 
                 </div>
