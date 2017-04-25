@@ -1,6 +1,6 @@
 
 @import "ember-bootstrap/bootstrap";
-@import "materialize/materialize";
+// @import "materialize/materialize";
 
 
 * {
@@ -126,4 +126,69 @@ span.badge {
   border-radius: 0;
   background-color: #D33A3A;
 
+}
+
+
+
+
+
+
+
+// switches
+.lbl {
+  position: relative;
+  display: block;
+  height: 20px;
+  width: 44px;
+  background: #898989;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float:left;
+}
+.lbl:after {
+  position: absolute;
+  left: -2px;
+  top: -3px;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 100px;
+  background: rgb(245, 245, 245);
+  color: rgba(0, 0, 0, 0.870588);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.117647);
+  content: '';
+  transition: all 0.3s ease;
+}
+
+.lbl:active:after {
+  transform: scale(1.15, 0.85);
+}
+.cbx:checked ~ label {
+  background: #80DEEA;
+}
+.cbx:checked ~ label:after {
+  left: 20px;
+  background: #22BED5;
+}
+.cbx:disabled ~ label {
+  background: #d5d5d5;
+  pointer-events: none;
+}
+.cbx:disabled ~ label:after {
+  background: #bcbdbc;
+}
+
+
+
+.menu-canvas-element {
+  padding: 2em 0;
+}
+
+
+// menu-canvas-element-label
+.menu-canvas-element-label {
+  margin-left: 1em;
+  color: #333333;
+  font-weight: normal;
 }
