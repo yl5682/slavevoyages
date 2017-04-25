@@ -1,0 +1,151 @@
+{{outlet}}
+
+<div class="sub-menu col-md-12">
+  <h1 class="banner-title">Databases > Slave Voyages</h1>
+  <div class="search-bar">
+
+    {{#menu-aim}}
+    <div class="dropdown padding-left-none">
+      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        1855 - 1875
+        <span class="caret"></span>
+      </span>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
+        <li><a href="#">Date Time</a></li>
+      </ul>
+    </div>
+    {{/menu-aim}}
+
+
+    {{#menu-aim}}
+    <div class="dropdown">
+      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Ship, nation, owner
+        <span class="caret"></span>
+      </span>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="nation-ship-owners">
+        <li data-submenu-id="submenu-vin">
+          <a href="#">Voyage identification number <span class="badge">4</span></a>
+
+          <div id="submenu-vin" class="menu-canvas">
+              <h3 class="menu-canvas-title">Voyage identification number</h3>
+              <div class="menu-canvas-content">
+                <div class="menu-item-description">Voyage identification number is also known as VoyageIDs. They are used to represent and
+                reference each unique voyage in the database.</div>
+              </div>
+          </div>
+        </li>
+
+        <li data-submenu-id="submenu-v-cdrom">
+          <a href="#">Voyage in 1999 CD-ROM <span class="badge">4</span></a>
+          <div id="submenu-v-cdrom" class="menu-canvas">
+              <h3 class="menu-canvas-title">Voyage in 1999 CD-ROM</h3>
+              <div class="menu-canvas-content">
+
+                <!-- The Toggle -->
+
+                <div class="menu-canvas-element">
+
+                {{input type="checkbox" checked=cdrom-checked id="test1" class="cbx hidden"}}
+                <label for="test1" class="lbl"></label>
+                <label class="menu-canvas-element-label">Voyages in 1999 CD-ROM</label>
+
+
+
+                {{cdrom-checked}}
+
+
+
+
+
+
+
+                <div>
+                    <button type="button" class="btn btn-primary">Update</button>
+                </div>
+
+
+                </div>
+                <!-- <div class="row press">
+                  <input type="checkbox" id="checked" class="cbx hidden" checked/>
+                  <label for="checked" class="lbl"></label>
+                </div>
+                 <div class="row">
+                  <input type="checkbox" id="unchecked_disabled" class="cbx hidden" disabled/>
+                  <label for="unchecked_disabled" class="lbl"></label>
+                </div> -->
+
+              </div>
+          </div>
+        </li>
+
+        <li data-submenu-id="submenu-vessel-name">
+          <a href="#">Vessel name</a>
+          <div id="submenu-vessel-name" class="menu-canvas">
+              <h3 class="menu-canvas-title">Vessel name</h3>
+              <div class="menu-canvas-content">
+                Hello
+              </div>
+          </div>
+        </li>
+        <li data-submenu-id="submenu-flag" >
+          <a href="#">Flag</a>
+          <div id="submenu-flag" class="menu-canvas">
+              <h3 class="menu-canvas-title">Flag</h3>
+              <div class="menu-canvas-content">
+                Hello
+              </div>
+          </div>
+        </li>
+        <li data-submenu-id="submenu-construction-registration"><a href="#">Construction and registration</a>
+          <div id="submenu-construction-registration" class="menu-canvas">
+              <h3 class="menu-canvas-title">Construction and registration</h3>
+              <div class="menu-canvas-content">
+                Hello
+              </div>
+          </div>
+        </li>
+        <li data-submenu-id="submenu-rig"><a href="#">Rig</a>
+          <div id="submenu-rig" class="menu-canvas">
+              <h3 class="menu-canvas-title">Rig</h3>
+              <div class="menu-canvas-content">
+                Hello
+              </div>
+          </div>
+        </li>
+        <li data-submenu-id="submenu-tonnage"><a href="#">Tonnage</a>
+          <div id="submenu-tonnage" class="menu-canvas">
+              <h3 class="menu-canvas-title">Tonnage</h3>
+              <div class="menu-canvas-content">
+                Hello
+              </div>
+          </div>
+        </li>
+
+        <li data-submenu-id="submenu-guns-mounted"><a href="#">Guns mounted</a>
+          <div id="submenu-guns-mounted" class="menu-canvas">
+              <h3 class="menu-canvas-title">Guns mounted</h3>
+              <div class="menu-canvas-content">
+                Hello
+              </div>
+          </div>
+        </li>
+
+        <li data-submenu-id="submenu-vessel-owners"><a href="#">Vessel owners</a>
+          <div id="submenu-vessel-owners" class="menu-canvas">
+              <h3 class="menu-canvas-title">Vessel owners</h3>
+              <div class="menu-canvas-content">
+                Hello
+              </div>
+          </div>
+        </li>
+
+
+      </ul>
+    </div>
+
+
+    {{/menu-aim}}
+
+  </div>
+</div>
