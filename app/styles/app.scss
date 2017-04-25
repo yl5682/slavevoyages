@@ -48,8 +48,57 @@ h1 {
 
 .dropdown {
   cursor: pointer;
+  float: left;
+  padding: 0.5em 1em;
 }
 
 .search-bar {
   margin-bottom: 15px;
+}
+
+.menu-canvas {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  display: none;
+  border-radius: 0px 4px 4px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  width: 600px;
+}
+
+.dropdown-menu {
+  border-radius: 4px 0px 0px 4px;
+  margin: 0;
+}
+
+.menu-canvas {
+  padding: 0 1em;
+}
+
+.menu-canvas-title {
+  color: #4f4f4f;
+}
+
+ul.dropdown-menu {
+  a {
+    height: 3em;
+    line-height: 3em;
+  }
+}
+
+.menu-item-description {
+  color: #9f9f9f;
+}
+
+.search-menu {
+  font-weight: 400;
+  font-size: 1.25em;
+}
+
+.padding-left-none {
+  padding-left: 0;
 }

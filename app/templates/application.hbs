@@ -25,20 +25,78 @@
   <h1>Databases > Slave Voyages</h1>
 
   <div class="search-bar">
-    <div class="dropdown">
-      <span class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Dropdown
+
+    {{#menu-aim}}
+    <div class="dropdown padding-left-none">
+      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        1855 - 1875
         <span class="caret"></span>
       </span>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">Separated link</a></li>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
+        <li><a href="#">Date Time</a></li>
       </ul>
     </div>
+    {{/menu-aim}}
+
+
+    {{#menu-aim}}
+    <div class="dropdown">
+      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Ship, nation, owner
+        <span class="caret"></span>
+      </span>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="nation-ship-owners">
+        <li data-submenu-id="submenu-vin">
+          <a href="#">Voyage identification number</a>
+          <div id="submenu-vin" class="menu-canvas">
+              <h3 class="menu-canvas-title">Voyage identification number</h3>
+              <div class="menu-canvas-content">
+                <div class="menu-item-description">Voyage identification number is also known as VoyageIDs. They are used to represent and
+                reference each unique voyage in the database.</div>
+              </div>
+          </div>
+        </li>
+
+        <li data-submenu-id="submenu-v-cdrom">
+          <a href="#">Voyage in 1999 CD-ROM</a>
+          <div id="submenu-v-cdrom" class="menu-canvas">
+              <h3 class="menu-canvas-title">Voyage in 1999 CD-ROM</h3>
+              <div class="menu-canvas-content">
+
+              </div>
+          </div>
+        </li>
+
+        <li data-submenu-id="submenu-vessel-name">
+          <a href="#">Vessel name</a>
+          <div id="submenu-vessel-name" class="menu-canvas">
+              <h3 class="menu-canvas-title">Vessel name</h3>
+              <div class="menu-canvas-content"></div>
+          </div>
+        </li>
+        <li data-submenu-id="submenu-flag" >
+          <a href="#">Flag</a>
+          <div id="submenu-flag" class="menu-canvas">
+              <h3 class="menu-canvas-title">Flag</h3>
+              <div class="menu-canvas-content"></div>
+          </div>
+        </li>
+        <li><a href="#">Construction and registration</a></li>
+        <li><a href="#">Rig</a></li>
+        <li><a href="#">Tonnage</a></li>
+        <li><a href="#">Guns mounted</a></li>
+        <li><a href="#">Vessel owners</a></li>
+      </ul>
+    </div>
+
+
+    {{/menu-aim}}
+
+
+
   </div>
+
+
 
 </div>
 {{outlet}}
