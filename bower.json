@@ -1,5 +1,6 @@
 {
   "name": "mockup",
   "dependencies": {
+    "photoswipe": "4.1.0"
   }
 }
