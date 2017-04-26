@@ -2,11 +2,14 @@
 @import "ember-bootstrap/bootstrap";
 // @import "materialize/materialize";
 
-@import "ember-cli-loaders/loaders";
+// @import "ember-cli-loaders/loaders";
 
 
 * {
   font-family: 'Roboto', sans-serif;
+  a {
+    cursor: pointer;
+  }
 }
 
 .navbar-default {
@@ -39,6 +42,12 @@
   font-weight: 900;
   opacity: 1;
 }
+ .maintainHover {
+  background-color: #f5f5f5;
+  font-weight: 900;
+  opacity: 1;
+}
+
 
 
 .language-toggle {
@@ -132,9 +141,11 @@ ul.dropdown-menu {
 
 
 span.badge {
-  float: right;
+  // float: right;
   margin-top: .5em;
   color: white;
+  right: 2em;
+  position: absolute;
   min-width: 2rem;
 }
 
@@ -278,4 +289,8 @@ span.badge {
 
 .image-gallery {
   margin: 1em 0;
+}
+
+.disabled {
+  cursor: not-allowed;
 }

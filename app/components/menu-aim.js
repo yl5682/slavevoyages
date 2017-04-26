@@ -17,7 +17,7 @@ export default Ember.Component.extend({
       $submenu.css({
           display: "block",
           top: -3,
-          left: width - 3,  // main should overlay submenu
+          left: width - 6,  // main should overlay submenu
           height: height  // padding for main dropdown's arrow
       });
       // Keep the currently activated row's highlighted look
