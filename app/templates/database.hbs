@@ -20,12 +20,12 @@
     {{#menu-aim}}
     <div class="dropdown">
       <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Ship, nation, owner
+        Ship, nation, owner {{#unless resetBtnEnabled}}({{count}}){{/unless}}
         <span class="caret"></span>
       </span>
       <ul class="dropdown-menu" role="menu" aria-labelledby="nation-ship-owners">
         <li data-submenu-id="submenu-vin">
-          <a href="#">Voyage identification number <span class="badge">4</span></a>
+          <a href="#">Voyage identification number </a>
 
           <div id="submenu-vin" class="menu-canvas">
               <h3 class="menu-canvas-title">Voyage identification number</h3>
@@ -37,7 +37,7 @@
         </li>
 
         <li data-submenu-id="submenu-v-cdrom">
-          <a href="#">Voyage in 1999 CD-ROM <span class="badge">4</span></a>
+          <a href="#">Voyage in 1999 CD-ROM {{#unless resetBtnEnabled}}<span class="badge">{{count}}</span>{{/unless}}</a>
           <div id="submenu-v-cdrom" class="menu-canvas">
               <h3 class="menu-canvas-title">Voyage in 1999 CD-ROM</h3>
               <div class="menu-canvas-content">
@@ -47,15 +47,14 @@
                 <div class="menu-canvas-element">
 
                   <div class="element-container">
-                    {{input type="checkbox" checked=cdrom-checked id="test1" class="cbx hidden"}}
+                    {{input type="checkbox" checked=cdromChecked id="test1" class="cbx hidden"}}
                     <label for="test1" class="lbl"></label>
-                    <div class="menu-canvas-element-label">Voyages in 1999 CD-ROM {{cdrom-checked}}</div>
+                    <div class="menu-canvas-element-label">Voyages in 1999 CD-ROM</div>
                   </div>
 
-
-
                   <div class="element-container">
-                      <button type="button" class="btn btn-primary">Update</button>
+                      <button type="button" class="btn btn-primary" disabled={{updateBtnEnabled}} {{action 'toggleCdrom' on="mouseUp"}}>Apply</button>
+                      <button type="button" class="btn btn-primary" disabled={{resetBtnEnabled}} {{action "resetCdrom" on="mouseUp"}} >Reset</button>
                   </div>
 
 
@@ -142,4 +141,15 @@
     {{/menu-aim}}
 
   </div>
+</div>
+
+<div class="col-md-12">
+
+<div style="margin:32em;"></div>
+
+  exisitingState: {{exisitingState}}
+  modifiedState: {{modifiedState}}
+  cdromChecked: {{cdromChecked}}
+  updateBtnEnabled: {{updateBtnEnabled}}
+  resetBtnEnabled: {{resetBtnEnabled}}
 </div>

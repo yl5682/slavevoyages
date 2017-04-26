@@ -1,7 +1,18 @@
-{{yield}}
+<!-- {{yield}} -->
 
-<div class="press">    
-  <input type="checkbox" id="unchecked" checked={{value}} class="cbx hidden"/>
-  <label for="unchecked" class="lbl"></label>
+<div class="press">
+  <input type="checkbox" id="unchecked" checked={{cdromChecked}} class="cbx hidden" />
+  <label for="unchecked" class="lbl" {{action "toggle" cdromChecked}}></label>
+  <div class="menu-canvas-element-label">{{label}} {{cdromChecked}}</div>
 </div>
-<label class="menu-canvas-element-label">{{label}}</label>
+
+
+
+<!-- <ul>
+  {{#each cart.items as |item|}}
+    <li>
+      {{item.name}}
+      <button {{action "remove" item}}>Remove</button>
+    </li>
+  {{/each}}
+</ul> -->

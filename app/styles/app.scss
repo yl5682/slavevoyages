@@ -81,7 +81,7 @@ h1 {
   display: none;
   border-radius: 0px 4px 4px 0px;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-left: 1px solid rgba(0, 0, 0, 0);
+  border-left: 1px solid #B6B6B6;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
   padding: 0 2em;
@@ -144,7 +144,6 @@ span.badge {
 .badge {
   border-radius: 0;
   background-color: #D33A3A;
-
 }
 
 
@@ -251,4 +250,17 @@ span.badge {
   background-color: #00ACC1;
   border-color: #00ACC1;
   transition: 0.2s ease;
+}
+
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary {
+  opacity: .4;
+}
+
+.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover {
+  outline:none;
+  color: white;
+  background-color: #22bed5;
+  border-color: #22bed5;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.05);
+  opacity: .4;
 }
