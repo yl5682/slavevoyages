@@ -37,6 +37,10 @@ export default Ember.Controller.extend({
 
      resetCdrom() {
        this.set('cdromChecked', this.get("exisitingState"));
+     },
+
+     saveSearch() {
+       alert('Will save search');
      }
    },
 });
