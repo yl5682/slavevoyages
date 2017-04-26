@@ -101,9 +101,18 @@
   </div>
 </div>
 
-Image Gallery
+<div class="sv-container">
+<div class="row">
+  <div class="col-md-12 sv-image-gallery-title">
+    <h3>Manuscripts</h3>
+  </div>
 
+  {{#photo-swipe items=model as |img|}}
+  <div class="col-md-3 text-center">
+    <img class="thumb" src={{img.src}} alt={{img.title}} height="500px">
+    <p class='image-gallery'>{{img.title}}</p>
+  </div>
+  {{/photo-swipe}}
 
-{{#photo-swipe items=model as |img|}}
-  <img class="thumb" src={{img.src}} alt={{img.title}} height="500px">
-{{/photo-swipe}}
+</div>
+</div>

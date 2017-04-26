@@ -5,5 +5,4 @@ export default Ember.Controller.extend({
   slavesChecked: true,
   vesselsChecked: true,
   manuscriptsChecked: true,
-  
 });
