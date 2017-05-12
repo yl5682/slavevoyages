@@ -24,6 +24,7 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import('vendor/jquery-menu-aim.js');
+  app.import('vendor/mapbox-gl.js');
 
   return app.toTree();
 };

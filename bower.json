@@ -7,6 +7,7 @@
     "datatables.net-plugins": "^1.10.15",
     "loaders.css": "^0.1.2",
     "mapbox.js": "2.3.0",
-    "leaflet.markerclusterer": "0.4.0"
+    "leaflet.markerclusterer": "0.4.0",
+    "mapbox-gl-js": "0.11.0"
   }
 }
