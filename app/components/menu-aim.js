@@ -2,8 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-
-
   didInsertElement() {
 
     var menu = this.$(".dropdown-menu");

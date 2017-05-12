@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+
+
   didInsertElement: function(){
-    debugger;
         // jQuery for page scrolling feature - requires jQuery Easing plugin
         Ember.$('a.page-scroll').bind('click', function(event) {
             var $anchor = $(this);
