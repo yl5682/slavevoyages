@@ -347,3 +347,17 @@ footer {
 .footer-logo {
   height: 6em;
 }
+
+// landing page
+.cover-image {
+    width:  100%; /*or 70%, or what you want*/
+    height: 1200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+.cover-image-container {
+  background-color: #261902;
+}
