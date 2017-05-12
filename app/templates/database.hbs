@@ -7,39 +7,33 @@
     {{#menu-aim}}
     <div class="dropdown padding-left-none">
       <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        1855 - 1875
+        {{fromYear}} - {{toYear}}
         <span class="caret"></span>
       </span>
       <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
-        <li><a href="#">Date Time (placeholder)</a></li>
+        <li data-submenu-id="submenu-year">
+          <a href="#">Date Time</a>
+          <div id="submenu-year" class="menu-canvas">
+              <h3 class="menu-canvas-title">Date Time</h3>
+              <div class="menu-canvas-content">
+                <div class="menu-item-description">Voyage begin and end time range</div>
+                  <div>
+                    from {{paper-input type="number" value=fromYear onChange=(action (mut fromYear))}}
+                    to {{paper-input type="number" value=toYear onChange=(action (mut toYear))}}
+                  </div>
+
+                  {{fromYear}}
+
+                  {{toYear}}
+                  <div>{{paper-slider class="flex" min=1855 max=1974 value=fromYear onChange=(action (mut fromYear))}}</div>
+
+
+              </div>
+          </div>
+        </li>
       </ul>
     </div>
     {{/menu-aim}}
-
-    {{#menu-aim}}
-    <div class="dropdown padding-left-none">
-      <span class="dropdown-toggle search-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        placeholder
-        <span class="caret"></span>
-      </span>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
-        <li><a href="#">placeholder</a></li>
-      </ul>
-    </div>
-    {{/menu-aim}}
-
-    {{#menu-aim}}
-    <div class="dropdown padding-left-none">
-      <span class="dropdown-toggle search-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        placeholder
-        <span class="caret"></span>
-      </span>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
-        <li><a href="#">placeholder</a></li>
-      </ul>
-    </div>
-    {{/menu-aim}}
-
 
     {{#menu-aim}}
     <div class="dropdown">

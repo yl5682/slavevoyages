@@ -5,6 +5,8 @@
     "datatables.net": "^1.10.15",
     "datatables.net-dt": "^3.2.2",
     "datatables.net-plugins": "^1.10.15",
-    "loaders.css": "^0.1.2"
+    "loaders.css": "^0.1.2",
+    "mapbox.js": "2.3.0",
+    "leaflet.markerclusterer": "0.4.0"
   }
 }
