@@ -30,5 +30,7 @@ export default Ember.Controller.extend({
                 top: 100
             }
         })
-  }
+  },
+
+  
 });

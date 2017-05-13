@@ -352,7 +352,7 @@ footer {
 // landing page
 .cover-image {
     width:  100%; /*or 70%, or what you want*/
-    height: 1200px;
+    height: 800px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -376,7 +376,7 @@ footer {
 }
 
 .jumbotron {
-  margin: 20% 0 10% 0;
+  margin: 5% 0 10% 0;
   background-color: rgba(255,255,255,0.2);
 }
 
@@ -417,4 +417,40 @@ footer {
 }
 .sponsors-card, .partners-card {
   padding: 2em 0;
+}
+
+.padding-none {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+// mapbox
+.mapboxgl-popup-content {
+  color: black;
+}
+.mapboxgl-marker, .mapbox-marker {
+    background-image: url('/assets/images/site/map-marker.svg');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    // border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapbox-info-card {
+  background-color: #617D8A;
+  height: 600px;
+  padding: 4em;
+}
+
+.mapbox-card-title {
+  font-size: 3em;
+  font-weight: 600;
+  margin: .5em 0;
+}
+
+.mapbox-card-content {
+  font-size: 1.5em;
+  margin: 1em 0;
 }

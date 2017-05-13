@@ -10,6 +10,13 @@ export default Ember.Route.extend({
       this.controllerFor('application').set('isIndexPage', false);
     }
 
+  },
+
+  actions: {
+    notify: function(item){
+      debugger;
+      console.log(`item notified ${item}`)
+    }
   }
 
 });
