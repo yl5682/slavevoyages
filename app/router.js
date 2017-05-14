@@ -8,7 +8,14 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('index',  {path: '/'});
-  this.route('databases');
+  this.route('databases', function() {
+    this.route('voyages', function() {
+      this.route('search');
+    });
+    this.route('intra-american', function() {});
+    this.route('slave-trade', function() {});
+    this.route('african-names', function() {});
+  });
   this.route('gallery');
 });
 

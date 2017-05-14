@@ -1,0 +1,18 @@
+<div class="jumbo-container">
+  <div class="jumbotron jumbotron-database">
+    <div class="jumbotron-title">Voyages Database</div>
+    <p class="jumbo-description">
+      The Trans-Atlantic Slave Trade Database comprises more than 35,000 individual slaving expeditions between 1514 and 1866. Records of the voyages have been found in archives and libraries throughout the Atlantic world. They provide information about vessels, enslaved peoples, slave traders and owners, and trading routes. A variable (Source) cites the records for each voyage in the database. Other variables enable users to search for information about a particular voyage or group of voyages. The website provides full interactive capability to analyze the data and report results in the form of statistical tables, graphs, maps, a timeline, and an animation.
+    </p>
+    <hr class="my-4">
+    <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button" disabled>guide</a>
+      {{#link-to "databases.voyages.search" class="btn btn-primary btn-lg"  role="button"}}search database{{/link-to}}
+      <a class="btn btn-primary btn-lg" href="#" role="button" disabled>downloads</a>
+      <a class="btn btn-primary btn-lg" href="#" role="button" disabled>contribute</a>
+    </p>
+  </div>
+</div>
+
+{{outlet}}
