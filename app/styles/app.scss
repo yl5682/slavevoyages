@@ -1,7 +1,14 @@
 @import "ember-bootstrap/bootstrap";
 @import "landing-page";
+
+// Define desired color palettes.
+$primary: "cyan";
+$accent: "cyan";
+$warn: "pink";
+
 @import "color-palette"; // for ember paper styling
 @import "ember-paper";
+
 @import "vendor/mapbox-gl-v0.32.1";
 @import "vendor/datatables.min";
 
@@ -128,6 +135,7 @@ ul.dropdown-menu {
 
 .menu-item-description {
   color: #9f9f9f;
+  margin-bottom: 1em;
 }
 
 .search-menu {
@@ -577,4 +585,15 @@ a {
 
 .pagination > li > a {
   color: #00abc7;
+}
+
+// EMBER paper
+.md-button {
+  color: rgba(255,255,255, 0.87) !important;
+}
+
+md-input-container {
+  label {
+    margin-bottom: 0;
+  }
 }

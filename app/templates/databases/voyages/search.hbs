@@ -6,22 +6,7 @@
     {{#menu-aim}}
     <div class="dropdown padding-left-none">
       <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-
-        {{#paper-form onSubmit=(action "basicSubmitAction") as |form|}}
-          <div class="layout-row">
-            <div class="layout-column flex-50">
-              {{form.input type="number" label="From" value=fromYear onChange=(action (mut fromYear)) min=1514 max=toYear required=true}}
-              {{form.input type="number" label="To" value=toYear onChange=(action (mut toYear)) min=fromYear max=1514 required=true}}
-            </div>
-          </div>
-          <div class="layout-row">
-            {{#form.submit-button raised=true primary=true}}Apply{{/form.submit-button}}
-          </div>
-        {{/paper-form}}
-
-
-
-        {{fromYear}} - {{toYear}}
+        {{_fromYear}} - {{_toYear}}
         <span class="caret"></span>
       </span>
       <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
@@ -31,17 +16,13 @@
               <h3 class="menu-canvas-title">Date Time</h3>
               <div class="menu-canvas-content">
                 <div class="menu-item-description">Voyage begin and end time range</div>
-                  <div>
-                    from {{paper-input type="number" value=fromYear onChange=(action (mut fromYear))}}
-                    to {{paper-input type="number" value=toYear onChange=(action (mut toYear))}}
-                  </div>
-
-                  {{fromYear}}
-
-                  {{toYear}}
-                  <div>{{paper-slider class="flex" min=1855 max=1974 value=fromYear onChange=(action (mut fromYear))}}</div>
-
-
+                    {{#paper-form onSubmit=(action "applyYearRange") as |form|}}
+                      {{form.input type="number" label="From" value=fromYear onChange=(action (mut fromYear)) min=1514 max=toYear required=true}}
+                      {{form.input type="number" label="To" value=toYear onChange=(action (mut toYear)) min=fromYear max=1866 required=true}}
+                      <div class="element-container">
+                          <button type="button" class="btn btn-primary" disabled={{form.isInvalid}} {{action 'applyYearRange' on="mouseUp"}}>Apply</button>
+                      </div>
+                    {{/paper-form}}
               </div>
           </div>
         </li>
