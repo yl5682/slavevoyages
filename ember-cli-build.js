@@ -25,6 +25,8 @@ module.exports = function(defaults) {
 
   app.import('vendor/jquery-menu-aim.js');
   app.import('vendor/mapbox-gl.js');
+  app.import('vendor/migration/selectize.js');
+  app.import('vendor/migration/search_term.js');
 
   return app.toTree();
 };
