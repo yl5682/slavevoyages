@@ -64,7 +64,9 @@ export default Ember.Component.extend({
   	    container: 'map',
   	    style: 'mapbox://styles/mslee/cif5p01n202nisaktvljx9mv3',
         center: [-30, 17], // starting position
-    		zoom: 1 // starting zoom
+    		zoom: 1, // starting zoom
+        minZoom: 1,
+        maxZoom: 1
   	});
     map.scrollZoom.disable();
 
