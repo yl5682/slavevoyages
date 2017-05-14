@@ -3,17 +3,15 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   updateSearch: Ember.observer("vs", function(){
-    this.executeSearch();
+    if (mainDatatable) {
+      mainDatatable.ajax.reload();
+    } else {
+      this.executeSearch();
+    }
   }),
 
   executeSearch: function(){
     // Reload datatables.
-			if (mainDatatable) {
-				mainDatatable.ajax.reload();
-			} else {
-
-
-
         mainDatatable = $('#results_main_table').DataTable({
           ajax: {
             url: "http://localhost:8000/voyage/876167cf-bc40-44f7-9557-ee8117d94008/beta_ajax_search",
@@ -122,15 +120,8 @@ export default Ember.Component.extend({
           stateDuration: -1,
           colReorder: true,
         });
-        
 
 
-
-
-
-
-
-      }
 
   },
 
