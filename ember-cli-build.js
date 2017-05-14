@@ -28,6 +28,8 @@ module.exports = function(defaults) {
   app.import('vendor/migration/selectize.js');
   app.import('vendor/migration/search_term.js');
   app.import('vendor/datatables.min.js');
+  app.import('vendor/migration/dt-search.js');
+
 
   return app.toTree();
 };

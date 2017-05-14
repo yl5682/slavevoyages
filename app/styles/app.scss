@@ -289,7 +289,7 @@ span.badge {
 }
 
 .sv-image-gallery-title {
-  margin: 1em 0 3em 0;
+  margin: 1em 0;
 }
 
 .image-gallery {
@@ -535,13 +535,14 @@ a {
         a {
             border-bottom: 3px solid #00abc7;
             padding-bottom: 7px;
-            font-weight: 600;
+            font-weight: 800;
         }
       }
 
       a {
-        font-size: 1em;
+        font-size: 1.25em;
         padding: 15px;
+        font-weight: 400;
 
         &:hover, &:focus {
           background: transparent;
@@ -563,4 +564,16 @@ a {
 .padding {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+
+// dataTables_length
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus {
+  background-color: #00abc7;
+  border-color: #00abc7;
+}
+
+.pagination > li > a {
+  color: #00abc7;
 }
