@@ -283,7 +283,7 @@ span.badge {
 
 
 .sv-container {
-  padding: 2em;
+  padding: 0 2em 2em 2em;
 }
 
 .sv-image-gallery-title {
@@ -525,4 +525,40 @@ a {
 .section-statistics-number {
   font-weight: 700;
   font-size: 4em;
+}
+
+.content-tab {
+    li {
+      &.active {
+        a {
+            border-bottom: 3px solid #00abc7;
+            padding-bottom: 7px;
+            font-weight: 600;
+        }
+      }
+
+      a {
+        font-size: 1em;
+        padding: 15px;
+
+        &:hover, &:focus {
+          background: transparent;
+          color: #00abc7;
+        }
+
+      }
+    }
+
+    li:first-child {
+      a {
+        padding-left: 15px;
+      }
+    }
+
+}
+
+
+.padding {
+  padding-left: 30px;
+  padding-right: 30px;
 }

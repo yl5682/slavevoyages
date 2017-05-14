@@ -10,7 +10,15 @@ Router.map(function() {
   this.route('index',  {path: '/'});
   this.route('databases', function() {
     this.route('voyages', function() {
-      this.route('search');
+      this.route('search', function() {
+        this.route('results');
+        this.route('statistics');
+        this.route('tables');
+        this.route('graphs');
+        this.route('timeline');
+        this.route('maps');
+        this.route('animation');
+      });
     });
     this.route('intra-american', function() {});
     this.route('slave-trade', function() {});
