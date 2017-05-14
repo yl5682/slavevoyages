@@ -6,6 +6,21 @@
     {{#menu-aim}}
     <div class="dropdown padding-left-none">
       <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+        {{#paper-form onSubmit=(action "basicSubmitAction") as |form|}}
+          <div class="layout-row">
+            <div class="layout-column flex-50">
+              {{form.input type="number" label="From" value=fromYear onChange=(action (mut fromYear)) min=1514 max=toYear required=true}}
+              {{form.input type="number" label="To" value=toYear onChange=(action (mut toYear)) min=fromYear max=1514 required=true}}
+            </div>
+          </div>
+          <div class="layout-row">
+            {{#form.submit-button raised=true primary=true}}Apply{{/form.submit-button}}
+          </div>
+        {{/paper-form}}
+
+
+
         {{fromYear}} - {{toYear}}
         <span class="caret"></span>
       </span>
@@ -64,9 +79,11 @@
                 <div class="menu-canvas-element">
 
                   <div class="element-container">
-                    {{input type="checkbox" checked=cdromChecked id="test1" class="cbx hidden"}}
-                    <label for="test1" class="lbl"></label>
-                    <div class="menu-canvas-element-label">Voyages in 1999 CD-ROM</div>
+
+                    {{#paper-switch value=cdromChecked onChange=(action (mut cdromChecked))}}
+                      Voyages in 1999 CD-ROM
+                    {{/paper-switch}}
+
                   </div>
 
                   <div class="element-container">

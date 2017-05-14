@@ -7,6 +7,13 @@ export default Ember.Route.extend({
 
   actions: {
     executeSearch: function(){
+    },
+
+    basicSubmitAction: function(){
+      var fromYear = this.get("fromYear");
+      var toYear = this.get("toYear");
+
+      alert(`from ${fromYear} to ${toYear}`);
     }
   }
 });
