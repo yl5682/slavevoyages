@@ -27,6 +27,7 @@ module.exports = function(defaults) {
   app.import('vendor/mapbox-gl.js');
   app.import('vendor/migration/selectize.js');
   app.import('vendor/migration/search_term.js');
+  app.import('vendor/datatables.min.js');
 
   return app.toTree();
 };
