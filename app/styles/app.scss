@@ -557,7 +557,7 @@ a {
 
 .content-tab {
 
-    padding: .5em 0 2em 0 ;
+    padding: .5em 0 1em 0 ;
     li {
       &.active {
         a {
@@ -643,4 +643,8 @@ md-input-container {
 .jumbo-description {
   margin-top: 1em;
   color: #333333;
+}
+
+.query-title {
+  font-size: 1.25em;
 }

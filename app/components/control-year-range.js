@@ -8,6 +8,8 @@ export default Ember.Component.extend({
   toYear: SEARCH_MAX_YEAR,
   _fromYear: SEARCH_MIN_YEAR,
   _toYear: SEARCH_MAX_YEAR,
+  minYear: SEARCH_MIN_YEAR,
+  maxYear: SEARCH_MAX_YEAR,
 
   actions: {
     applyYearRange: function(){

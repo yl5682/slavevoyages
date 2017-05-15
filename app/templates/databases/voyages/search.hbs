@@ -17,6 +17,10 @@
       </span>
       <ul class="dropdown-menu" role="menu" aria-labelledby="nation-ship-owners">
         {{#control-vid tagName="li"}}{{/control-vid}}
+        {{#control-vessel-name tagName="li"}}{{/control-vessel-name}}
+        {{#control-vessel-owner tagName="li"}}{{/control-vessel-owner}}
+
+        {{#if voyagesSearch.showAdvanced}}
         <li data-submenu-id="submenu-v-cdrom">
           <a href="#">Voyage in 1999 CD-ROM</a>
           <div id="submenu-v-cdrom" class="menu-canvas">
@@ -36,9 +40,6 @@
           </div>
         </li>
 
-        {{#control-vessel-name tagName="li"}}{{/control-vessel-name}}
-        {{#control-vessel-owner tagName="li"}}{{/control-vessel-owner}}
-
         <li data-submenu-id="submenu-flag" >
           <a href="#">Flag</a>
           <div id="submenu-flag" class="menu-canvas">
@@ -57,8 +58,6 @@
               </div>
           </div>
         </li>
-
-        {{#if voyagesSearch.showAdvanced}}
         <li data-submenu-id="submenu-rig"><a href="#">Rig</a>
           <div id="submenu-rig" class="menu-canvas">
               <h3 class="menu-canvas-title">Rig</h3>

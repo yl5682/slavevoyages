@@ -7,8 +7,8 @@
   <div class="menu-canvas-content">
     <div class="menu-item-description">Voyage begin and end time range</div>
         {{#paper-form onSubmit=(action "applyYearRange") as |form|}}
-          {{form.input type="number" label="From" value=fromYear onChange=(action (mut fromYear)) min=SEARCH_MIN_YEAR max=toYear required=true}}
-          {{form.input type="number" label="To" value=toYear onChange=(action (mut toYear)) min=fromYear max=SEARCH_MAX_YEAR required=true}}
+          {{form.input type="number" label="From" value=fromYear onChange=(action (mut fromYear)) min=minYear max=toYear required=true}}
+          {{form.input type="number" label="To" value=toYear onChange=(action (mut toYear)) min=fromYear max=maxYear required=true}}
           <div class="element-container">
               <button type="button" class="btn btn-primary" disabled={{form.isInvalid}} {{action 'applyYearRange' on="mouseUp"}}>Apply</button>
           </div>
