@@ -11,7 +11,6 @@ export default Ember.Component.extend({
   toVid: null,
   count: 0,
   applyDisabled: Ember.computed("fromVid", "toVid", "option", function(){
-    debugger;
     if (this.get("option") == "is between") {
       if (this.get("fromVid") == null || this.get("toVid") == null) {
         return true;
