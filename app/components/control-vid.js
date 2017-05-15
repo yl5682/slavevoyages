@@ -1,13 +1,38 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-
-  voyagesSearch: Ember.inject.service(),
+  attributeBindings: ["data-submenu-id"],
+  "data-submenu-id": "submenu-vin",
+  filter: Ember.inject.service("voyagesSearch"),
   fieldId: "voyage_id",
   options: ['equals', 'is at most', 'is at least', 'is between'],
   option: 'equals',
   fromVid: null,
   toVid: null,
+  count: 0,
+  applyDisabled: Ember.computed("fromVid", "toVid", "option", function(){
+    debugger;
+    if (this.get("option") == "is between") {
+      if (this.get("fromVid") == null || this.get("toVid") == null) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      if (this.get("fromVid") == null) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }),
+
+  resetDisabled: Ember.computed("count", function(){
+    return (this.get("count") <= 0);
+  }),
+
+  noChanges: true,
+
   isBetween: Ember.computed("option", function(){
     return this.get("option") === "is between";
   }),
@@ -25,6 +50,7 @@ export default Ember.Component.extend({
 
   actions: {
     applyVid: function(){
+      var filter = this.get("filter");
       var fieldId = this.get("fieldId");
       var op = this.get("option");
 
@@ -34,7 +60,19 @@ export default Ember.Component.extend({
         searchTerm: [parseInt(this.get("fromVid")), parseInt(this.get("toVid"))]
       };
 
-      this.get("voyagesSearch").updateSearch(activeSearchTerms);
+      this.set("count", this.get("count")+1);
+      filter.set("shipNationOwnerCount", filter.get("shipNationOwnerCount")+1);
+      filter.updateSearch(activeSearchTerms);
+    },
+    removeSearch: function(){
+      var filter = this.get("filter");
+      var fieldId = this.get("fieldId");
+      this.set("fromVid", null);
+      this.set("toVid", null);
+      this.set("option", "equals");
+      this.set("count", 0);
+      filter.set("shipNationOwnerCount", filter.get("shipNationOwnerCount")-1);
+      filter.removeSearch(fieldId);
     }
   }
 });

@@ -4,7 +4,8 @@ export default Ember.Service.extend({
 
   items: null,
   hasChanged: false,
-
+  shipNationOwnerCount: 0,
+  
   // final search object
   currentSearchObj: Ember.computed("activeSearchTerms", function(){
     var newSearchObj = {items: this.get("activeSearchTerms"), orderBy: []}
@@ -51,6 +52,17 @@ export default Ember.Service.extend({
       activeSearchTerms.push(newSearchTerms);
       this.set("activeSearchTerms", activeSearchTerms);
     }
+  },
+
+  removeSearch(varName){
+    var activeSearchTerms = JSON.parse(JSON.stringify(this.get("activeSearchTerms")));
+    for (var i = 0; i < activeSearchTerms.length; i++) {
+        if (activeSearchTerms[i].varName === varName) {
+            activeSearchTerms.splice(i,1);
+            break;
+        }
+    }
+    this.set("activeSearchTerms", activeSearchTerms);
   },
 
   remove(item) {

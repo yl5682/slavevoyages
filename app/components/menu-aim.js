@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
+  filter: Ember.inject.service("voyagesSearch"),
+  
+
   didInsertElement() {
 
     var menu = this.$(".dropdown-menu");

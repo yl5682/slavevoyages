@@ -9,26 +9,17 @@
     </div>
     {{/menu-aim}}
 
-
-
-
     {{#menu-aim}}
     <div class="dropdown">
       <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Ship, nation, owner {{#unless resetBtnEnabled}}({{count}}){{/unless}}
+        Ship, nation, owner {{#if voyagesSearch.shipNationOwnerCount}}({{voyagesSearch.shipNationOwnerCount}}){{/if}}
         <span class="caret"></span>
       </span>
       <ul class="dropdown-menu" role="menu" aria-labelledby="nation-ship-owners">
-        <li data-submenu-id="submenu-vin">
-          <a href="#">Voyage identification number </a>
-
-          <div id="submenu-vin" class="menu-canvas">
-            {{#control-vid}}{{/control-vid}}
-          </div>
-        </li>
+        {{#control-vid tagName="li"}}{{/control-vid}}
 
         <li data-submenu-id="submenu-v-cdrom">
-          <a href="#">Voyage in 1999 CD-ROM {{#unless resetBtnEnabled}}<span class="badge">{{count}}</span>{{/unless}}</a>
+          <a href="#">Voyage in 1999 CD-ROM</a>
           <div id="submenu-v-cdrom" class="menu-canvas">
               <h3 class="menu-canvas-title">Voyage in 1999 CD-ROM</h3>
               <div class="menu-canvas-content">
@@ -63,14 +54,8 @@
           </div>
         </li>
 
-        <li data-submenu-id="submenu-vessel-name">
-          <a href="#">Vessel name</a>
+        {{#control-vessel-name tagName="li"}}{{/control-vessel-name}}
 
-          <div id="submenu-vessel-name" class="menu-canvas">
-            {{#control-vessel-name}}{{/control-vessel-name}}
-          </div>
-
-        </li>
         <li data-submenu-id="submenu-flag" >
           <a href="#">Flag</a>
           <div id="submenu-flag" class="menu-canvas">
