@@ -3,7 +3,7 @@
 
 // Define desired color palettes.
 $primary: "cyan";
-$accent: "cyan";
+$accent: "pink";
 $warn: "pink";
 
 @import "color-palette"; // for ember paper styling
@@ -94,6 +94,14 @@ h1 {
   padding: 0.5em 1em;
 }
 
+.dropdown-menu > li > a:focus {
+  background-color: white;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #f5f5f5;
+}
+
 .search-bar {
   margin-bottom: 15px;
 }
@@ -164,7 +172,7 @@ span.badge {
 }
 
 .dropdown-menu > li > a {
-  width: 400px;
+  width: 270px;
   clear: left;
 }
 
@@ -596,4 +604,8 @@ md-input-container {
   label {
     margin-bottom: 0;
   }
+}
+
+
+.inline-form {
 }

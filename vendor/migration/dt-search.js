@@ -38,6 +38,12 @@
     TextSearchTerm(new VariableInfo('sources_plaintext_search', 'source', 'Source'), 'contains', null, 'Please type one or more words (or even partial words) that should appear in the source references for the voyage. The search is case insensitive.', minLengthValidator(3)),
   ];
 
+  var searchTermsDict = {};
+	for (var i = 0; i < searchTerms.length; ++i) {
+		var item = searchTerms[i];
+		searchTermsDict[item.varName] = item;
+	}
+  
   var mainDatatable = null;
   var currentSearchObj = {items: []};
   var resultsTableSearchCallback = function() {

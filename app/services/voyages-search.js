@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Service.extend({
 
   items: null,
+  hasChanged: false,
   currentSearchObj: {},
 
   // stringified version of the search object

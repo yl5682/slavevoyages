@@ -9,26 +9,29 @@
         {{_fromYear}} - {{_toYear}}
         <span class="caret"></span>
       </span>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
-        <li data-submenu-id="submenu-year">
-          <a href="#">Date Time</a>
-          <div id="submenu-year" class="menu-canvas">
-              <h3 class="menu-canvas-title">Date Time</h3>
-              <div class="menu-canvas-content">
-                <div class="menu-item-description">Voyage begin and end time range</div>
-                    {{#paper-form onSubmit=(action "applyYearRange") as |form|}}
-                      {{form.input type="number" label="From" value=fromYear onChange=(action (mut fromYear)) min=1514 max=toYear required=true}}
-                      {{form.input type="number" label="To" value=toYear onChange=(action (mut toYear)) min=fromYear max=1866 required=true}}
-                      <div class="element-container">
-                          <button type="button" class="btn btn-primary" disabled={{form.isInvalid}} {{action 'applyYearRange' on="mouseUp"}}>Apply</button>
-                      </div>
-                    {{/paper-form}}
-              </div>
-          </div>
-        </li>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range" style="width: 400px; padding: 1em 2em;">
+        <h3 class="menu-canvas-title">Date Time</h3>
+        <div class="menu-canvas-content">
+          <div class="menu-item-description">Voyage begin and end time range</div>
+              {{#paper-form onSubmit=(action "applyYearRange") as |form|}}
+                {{form.input type="number" label="From" value=fromYear onChange=(action (mut fromYear)) min=1514 max=toYear required=true}}
+                {{form.input type="number" label="To" value=toYear onChange=(action (mut toYear)) min=fromYear max=1866 required=true}}
+                <div class="element-container">
+                    <button type="button" class="btn btn-primary" disabled={{form.isInvalid}} {{action 'applyYearRange' on="mouseUp"}}>Apply</button>
+                </div>
+              {{/paper-form}}
+        </div>
       </ul>
     </div>
     {{/menu-aim}}
+
+
+
+
+
+
+
+
 
     {{#menu-aim}}
     <div class="dropdown">
@@ -41,11 +44,7 @@
           <a href="#">Voyage identification number </a>
 
           <div id="submenu-vin" class="menu-canvas">
-              <h3 class="menu-canvas-title">Voyage identification number</h3>
-              <div class="menu-canvas-content">
-                <div class="menu-item-description">Voyage identification number is also known as VoyageIDs. They are used to represent and
-                reference each unique voyage in the database.</div>
-              </div>
+            {{#control-vid}}{{/control-vid}}
           </div>
         </li>
 
@@ -57,7 +56,6 @@
                 <div class="menu-item-description">Whether to include voyages that were originally published in the CD-ROM format (Cambridge University Press, 1999)</div>
                 <!-- The Toggle -->
 
-                <div class="menu-canvas-element">
 
                   <div class="element-container">
 
@@ -73,7 +71,6 @@
                   </div>
 
 
-                </div>
                 <!-- <div class="row press">
                   <input type="checkbox" id="checked" class="cbx hidden" checked/>
                   <label for="checked" class="lbl"></label>
