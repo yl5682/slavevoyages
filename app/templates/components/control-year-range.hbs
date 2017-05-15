@@ -1,0 +1,17 @@
+<span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  {{_fromYear}} - {{_toYear}}
+  <span class="caret"></span>
+</span>
+<ul class="dropdown-menu" role="menu" aria-labelledby="time-range" style="width: 400px; padding: 1em 2em;">
+  <h3 class="menu-canvas-title">Year Range</h3>
+  <div class="menu-canvas-content">
+    <div class="menu-item-description">Voyage begin and end time range</div>
+        {{#paper-form onSubmit=(action "applyYearRange") as |form|}}
+          {{form.input type="number" label="From" value=fromYear onChange=(action (mut fromYear)) min=SEARCH_MIN_YEAR max=toYear required=true}}
+          {{form.input type="number" label="To" value=toYear onChange=(action (mut toYear)) min=fromYear max=SEARCH_MAX_YEAR required=true}}
+          <div class="element-container">
+              <button type="button" class="btn btn-primary" disabled={{form.isInvalid}} {{action 'applyYearRange' on="mouseUp"}}>Apply</button>
+          </div>
+        {{/paper-form}}
+  </div>
+</ul>

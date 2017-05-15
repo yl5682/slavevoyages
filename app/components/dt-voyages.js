@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  filter: Ember.inject.service("voyagesSearch"),
 
   updateSearch: Ember.observer("vs", function(){
     if (mainDatatable) {

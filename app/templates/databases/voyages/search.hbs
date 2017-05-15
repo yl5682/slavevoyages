@@ -5,30 +5,9 @@
 
     {{#menu-aim}}
     <div class="dropdown padding-left-none">
-      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        {{_fromYear}} - {{_toYear}}
-        <span class="caret"></span>
-      </span>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range" style="width: 400px; padding: 1em 2em;">
-        <h3 class="menu-canvas-title">Date Time</h3>
-        <div class="menu-canvas-content">
-          <div class="menu-item-description">Voyage begin and end time range</div>
-              {{#paper-form onSubmit=(action "applyYearRange") as |form|}}
-                {{form.input type="number" label="From" value=fromYear onChange=(action (mut fromYear)) min=1514 max=toYear required=true}}
-                {{form.input type="number" label="To" value=toYear onChange=(action (mut toYear)) min=fromYear max=1866 required=true}}
-                <div class="element-container">
-                    <button type="button" class="btn btn-primary" disabled={{form.isInvalid}} {{action 'applyYearRange' on="mouseUp"}}>Apply</button>
-                </div>
-              {{/paper-form}}
-        </div>
-      </ul>
+      {{#control-year-range}}{{/control-year-range}}
     </div>
     {{/menu-aim}}
-
-
-
-
-
 
 
 
@@ -86,12 +65,11 @@
 
         <li data-submenu-id="submenu-vessel-name">
           <a href="#">Vessel name</a>
+
           <div id="submenu-vessel-name" class="menu-canvas">
-              <h3 class="menu-canvas-title">Vessel name</h3>
-              <div class="menu-canvas-content">
-                Filter by name of the vessel
-              </div>
+            {{#control-vessel-name}}{{/control-vessel-name}}
           </div>
+
         </li>
         <li data-submenu-id="submenu-flag" >
           <a href="#">Flag</a>

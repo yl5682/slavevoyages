@@ -1,0 +1,14 @@
+<h3 class="menu-canvas-title">Vessel Name</h3>
+<div class="menu-canvas-content">
+  <div class="menu-item-description">Please type one or more words (or even partial words) that should appear in the name of the vessel. The search is case insensitive.</div>
+
+  {{#paper-form class="inline-form" onSubmit=(action "applyVesselName") as |form|}}
+    {{form.input type="text" label=label value=vesselName onChange=(action (mut vesselName)) required=true}}
+    <div class="element-container">
+        <button type="button" class="btn btn-primary" disabled={{form.isInvalid}} {{action 'applyVesselName' on="mouseUp"}}>Apply</button>
+    </div>
+  {{/paper-form}}
+
+</div>
+
+{{yield}}
