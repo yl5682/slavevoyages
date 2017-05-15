@@ -5,7 +5,17 @@ export default Ember.Service.extend({
   items: null,
   hasChanged: false,
   shipNationOwnerCount: 0,
-  
+  captainCrewCount: 0,
+
+  showAdvanced: true,
+
+  showReset: Ember.computed("shipNationOwnerCount", "captainCrewCount", function(){
+    var totalCount = this.get("shipNationOwnerCount") + this.get("captainCrewCount");
+    // return totalCount;
+    return totalCount > 0 ? true : false;
+    // return true;
+  }),
+
   // final search object
   currentSearchObj: Ember.computed("activeSearchTerms", function(){
     var newSearchObj = {items: this.get("activeSearchTerms"), orderBy: []}

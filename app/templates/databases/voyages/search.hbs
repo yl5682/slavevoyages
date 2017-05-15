@@ -17,39 +17,21 @@
       </span>
       <ul class="dropdown-menu" role="menu" aria-labelledby="nation-ship-owners">
         {{#control-vid tagName="li"}}{{/control-vid}}
-
         <li data-submenu-id="submenu-v-cdrom">
           <a href="#">Voyage in 1999 CD-ROM</a>
           <div id="submenu-v-cdrom" class="menu-canvas">
               <h3 class="menu-canvas-title">Voyage in 1999 CD-ROM</h3>
               <div class="menu-canvas-content">
                 <div class="menu-item-description">Whether to include voyages that were originally published in the CD-ROM format (Cambridge University Press, 1999)</div>
-                <!-- The Toggle -->
-
-
-                  <div class="element-container">
-
+                  <!-- <div class="element-container">
                     {{#paper-switch value=cdromChecked onChange=(action (mut cdromChecked))}}
                       Voyages in 1999 CD-ROM
                     {{/paper-switch}}
-
                   </div>
-
                   <div class="element-container">
                       <button type="button" class="btn btn-primary" disabled={{updateBtnEnabled}} {{action 'toggleCdrom' on="mouseUp"}}>Apply</button>
                       <button type="button" class="btn btn-primary" disabled={{resetBtnEnabled}} {{action "resetCdrom" on="mouseUp"}} >Reset</button>
-                  </div>
-
-
-                <!-- <div class="row press">
-                  <input type="checkbox" id="checked" class="cbx hidden" checked/>
-                  <label for="checked" class="lbl"></label>
-                </div>
-                 <div class="row">
-                  <input type="checkbox" id="unchecked_disabled" class="cbx hidden" disabled/>
-                  <label for="unchecked_disabled" class="lbl"></label>
-                </div> -->
-
+                  </div> -->
               </div>
           </div>
         </li>
@@ -66,6 +48,7 @@
               </div>
           </div>
         </li>
+
         <li data-submenu-id="submenu-construction-registration"><a href="#">Construction and registration</a>
           <div id="submenu-construction-registration" class="menu-canvas">
               <h3 class="menu-canvas-title">Construction and registration</h3>
@@ -74,6 +57,8 @@
               </div>
           </div>
         </li>
+
+        {{#if voyagesSearch.showAdvanced}}
         <li data-submenu-id="submenu-rig"><a href="#">Rig</a>
           <div id="submenu-rig" class="menu-canvas">
               <h3 class="menu-canvas-title">Rig</h3>
@@ -82,6 +67,7 @@
               </div>
           </div>
         </li>
+
         <li data-submenu-id="submenu-tonnage"><a href="#">Tonnage</a>
           <div id="submenu-tonnage" class="menu-canvas">
               <h3 class="menu-canvas-title">Tonnage</h3>
@@ -99,33 +85,68 @@
               </div>
           </div>
         </li>
-
-      
+        {{/if}}
 
       </ul>
     </div>
-
-
     {{/menu-aim}}
-
 
     {{#menu-aim}}
-    <div class="dropdown padding-left-none pull-right">
-      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        {{fa-icon "heart" size=11}}  Saved search (placeholder)
-
+    <div class="dropdown">
+      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Captain and crew {{#if voyagesSearch.captainCrewCount}}({{voyagesSearch.captainCrewCount}}){{/if}}
+        <span class="caret"></span>
       </span>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
-        <li><a href="#">Saved search</a></li>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="nation-ship-owners">
+        {{#control-captain-name tagName="li"}}{{/control-captain-name}}
       </ul>
     </div>
     {{/menu-aim}}
 
+    {{#if voyagesSearch.showAdvanced}}
+      {{#menu-aim}}
+      <div class="dropdown">
+        <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Source
+          <span class="caret"></span>
+        </span>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="nation-ship-owners">
+          <li data-submenu-id="submenu-advaned-example"><a href="#">Source</a>
+            <div id="submenu-advaned-example" class="menu-canvas">
+                <h3 class="menu-canvas-title">Source</h3>
+                <div class="menu-canvas-content">
+                  Advanced filter here
+                </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      {{/menu-aim}}
+    {{/if}}
+
+    {{#if voyagesSearch.showReset}}
+      <span class="search-bar-button" {{action "alert" "will be implemented"}}>Reset all</span>
+    {{/if}}
+
+    {{#menu-aim}}
+      <div class="dropdown padding-left-none pull-right">
+        <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          {{fa-icon "share-alt" size=11}}
+        </span>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
+          <li><a href="#">Shareable search</a></li>
+        </ul>
+      </div>
+    {{/menu-aim}}
+
+    {{#menu-aim}}
+      {{#control-settings}}{{/control-settings}}
+    {{/menu-aim}}
 
   </div>
 </div>
 
-<div class="padding">
+<div class="padding tabular-menu">
 <div class="row">
 <div class="col-md-12">
 <ul class="nav navbar-nav content-tab">

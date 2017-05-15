@@ -11,6 +11,10 @@ export default Ember.Route.extend({
 
   actions: {
     executeSearch: function(){
-    }
+    },
+
+    alert(message){
+      alert(message);
+    },
   }
 });

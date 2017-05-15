@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
   _currentSearchObj: null,
   fromYear: SEARCH_MIN_YEAR,
   toYear: SEARCH_MAX_YEAR,
-
+  
   actions: {
   }
 });
