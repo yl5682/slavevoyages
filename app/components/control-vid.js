@@ -25,24 +25,18 @@ export default Ember.Component.extend({
       }
     }
   }),
-
   resetDisabled: Ember.computed("count", function(){
     return (this.get("count") <= 0);
   }),
-
-  noChanges: true,
-
   isBetween: Ember.computed("option", function(){
     return this.get("option") === "is between";
   }),
   fromLabel: Ember.computed("option", function(){
     return this.get("isBetween") ? "Starting Voyage ID" : "Voyage ID";
   }),
-
   toLabel: Ember.computed("option", function(){
     return this.get("isBetween") ? "Ending Voyage ID" : "Voyage ID";
   }),
-
   fieldRequired: Ember.computed("option", function(){
     return this.get("isBetween") ? true : false;
   }),
@@ -52,25 +46,28 @@ export default Ember.Component.extend({
       var filter = this.get("filter");
       var fieldId = this.get("fieldId");
       var op = this.get("option");
-
       var activeSearchTerms = {
         varName: fieldId,
         op: op,
         searchTerm: [parseInt(this.get("fromVid")), parseInt(this.get("toVid"))]
       };
-
-      this.set("count", this.get("count")+1);
-      filter.set("shipNationOwnerCount", filter.get("shipNationOwnerCount")+1);
+      if (!this.get("count")){
+        this.set("count", 1);
+        filter.set("shipNationOwnerCount", filter.get("shipNationOwnerCount") + 1);
+      }
       filter.updateSearch(activeSearchTerms);
     },
+    
     removeSearch: function(){
       var filter = this.get("filter");
       var fieldId = this.get("fieldId");
       this.set("fromVid", null);
       this.set("toVid", null);
       this.set("option", "equals");
-      this.set("count", 0);
-      filter.set("shipNationOwnerCount", filter.get("shipNationOwnerCount")-1);
+      if (this.get("count")){
+        this.set("count", 0);
+        filter.set("shipNationOwnerCount", filter.get("shipNationOwnerCount") - 1);
+      }
       filter.removeSearch(fieldId);
     }
   }

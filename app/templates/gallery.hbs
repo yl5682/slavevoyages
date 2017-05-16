@@ -5,31 +5,28 @@
   <div class="search-bar">
 
     {{#menu-aim}}
-    <div class="dropdown padding-left-none">
-      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <div class="dropdown padding-left-none">
+        <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         1855 - 1867
         <span class="caret"></span>
-      </span>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
-        <li><a href="#">Date Time (placeholder)</a></li>
-      </ul>
-    </div>
+        </span>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
+          <li><a href="#">Date Time (placeholder)</a></li>
+        </ul>
+      </div>
     {{/menu-aim}}
 
-
-
-
     {{#menu-aim}}
-    <div class="dropdown">
-      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <div class="dropdown">
+        <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         Search category
         <span class="caret"></span>
-      </span>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="nation-ship-owners">
+        </span>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="nation-ship-owners">
 
-        <li data-submenu-id="submenu-v-cdrom" style="height: 400px;">
-          <a href="#">Search category {{#unless resetBtnEnabled}}<span class="badge">{{count}}</span>{{/unless}}</a>
-          <div id="submenu-v-cdrom" class="menu-canvas">
+          <li data-submenu-id="submenu-v-cdrom" style="height: 400px;">
+            <a href="#">Search category {{#unless resetBtnEnabled}}<span class="badge">{{count}}</span>{{/unless}}</a>
+            <div id="submenu-v-cdrom" class="menu-canvas">
               <h3 class="menu-canvas-title">Search category</h3>
               <div class="menu-canvas-content">
                 <div class="menu-item-description">Whether to include images from specific categories (manuscripts, places, slaves, and vessels)</div>
@@ -62,8 +59,8 @@
                   </div>
 
                   <div class="element-container">
-                      <button type="button" class="btn btn-primary" disabled={{updateBtnEnabled}} {{action 'toggleCdrom' on="mouseUp"}}>Apply</button>
-                      <button type="button" class="btn btn-primary" disabled={{resetBtnEnabled}} {{action "resetCdrom" on="mouseUp"}} >Reset</button>
+                    <button type="button" class="btn btn-primary" disabled= {{updateBtnEnabled}} {{action 'toggleCdrom' on="mouseUp"}}>Apply</button>
+                    <button type="button" class="btn btn-primary" disabled= {{resetBtnEnabled}} {{action "resetCdrom" on="mouseUp"}}>Reset</button>
                   </div>
 
                 </div>
@@ -77,43 +74,43 @@
                 </div> -->
 
               </div>
-          </div>
-        </li>
+            </div>
+          </li>
 
-      </ul>
-    </div>
+        </ul>
+      </div>
 
 
     {{/menu-aim}}
 
     {{#menu-aim}}
-    <div class="dropdown padding-left-none">
-      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <div class="dropdown padding-left-none">
+        <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         Search keyword
         <span class="caret"></span>
-      </span>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
-        <li><a href="#">Search keyword (placeholder)</a></li>
-      </ul>
-    </div>
+        </span>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
+          <li><a href="#">Search keyword (placeholder)</a></li>
+        </ul>
+      </div>
     {{/menu-aim}}
 
   </div>
 </div>
 
 <div class="sv-container">
-<div class="row">
-  <div class="col-md-12 sv-image-gallery-title">
-    <h3>Manuscripts (4)</h3>
+  <div class="row">
+    <div class="col-md-12 sv-image-gallery-title">
+      <h3>Manuscripts (4)</h3>
+    </div>
+
+
+    {{#photo-swipe items=model as |img|}}
+      <div class="col-md-3 text-center">
+        <img class="thumb" src= {{img.src}} alt= {{img.title}} height="500px">
+        <p class='image-gallery'>{{img.title}}</p>
+      </div>
+    {{/photo-swipe}}
+
   </div>
-
-
-  {{#photo-swipe items=model as |img|}}
-  <div class="col-md-3 text-center">
-    <img class="thumb" src={{img.src}} alt={{img.title}} height="500px">
-    <p class='image-gallery'>{{img.title}}</p>
-  </div>
-  {{/photo-swipe}}
-
-</div>
 </div>

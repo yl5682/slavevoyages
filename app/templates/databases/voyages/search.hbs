@@ -27,15 +27,6 @@
               <h3 class="menu-canvas-title">Voyage in 1999 CD-ROM</h3>
               <div class="menu-canvas-content">
                 <div class="menu-item-description">Whether to include voyages that were originally published in the CD-ROM format (Cambridge University Press, 1999)</div>
-                  <!-- <div class="element-container">
-                    {{#paper-switch value=cdromChecked onChange=(action (mut cdromChecked))}}
-                      Voyages in 1999 CD-ROM
-                    {{/paper-switch}}
-                  </div>
-                  <div class="element-container">
-                      <button type="button" class="btn btn-primary" disabled={{updateBtnEnabled}} {{action 'toggleCdrom' on="mouseUp"}}>Apply</button>
-                      <button type="button" class="btn btn-primary" disabled={{resetBtnEnabled}} {{action "resetCdrom" on="mouseUp"}} >Reset</button>
-                  </div> -->
               </div>
           </div>
         </li>
@@ -124,7 +115,7 @@
     {{/if}}
 
     {{#if voyagesSearch.showReset}}
-      <span class="search-bar-button" {{action "alert" "will be implemented"}}>Reset all</span>
+      <!-- <span class="search-bar-button" {{action "resetAll"}}>Reset all</span> -->
     {{/if}}
 
     {{#menu-aim}}

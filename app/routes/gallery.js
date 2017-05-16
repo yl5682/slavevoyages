@@ -1,11 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
-
   model() {
-    var gallery = [
-      {
+    // will load from database via a model in the future
+    var gallery = [{
         src: '/assets/images/manuscripts/1.jpg',
         w: 400,
         h: 639,

@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     description: "Click on names of designated regions on the map for descriptions of the role of each in the trans-Atlantic slave trade.",
   },
 
-  clickedMarkerTitle: Ember.computed('clickedMarker', function(){
+  clickedMarkerTitle: Ember.computed('clickedMarker', function() {
     if (this.get("clickedMarker")) {
       return `${this.get("clickedMarker")["title"]}`;
     } else {
@@ -16,17 +16,15 @@ export default Ember.Component.extend({
     }
   }),
 
-  clickedMarkerText: Ember.computed("clickedMarker", function(marker){
+  clickedMarkerText: Ember.computed("clickedMarker", function(marker) {
     if (this.get("clickedMarker")) {
       return `${this.get("clickedMarker")["description"]}`;
     } else {
       return this.get('defaultDescription')["description"];
     }
-
   }),
 
-  didInsertElement: function(){
-
+  didInsertElement: function() {
     var _that = this;
 
     // locations
@@ -38,10 +36,10 @@ export default Ember.Component.extend({
       },
       caribbean: {
         title: "Caribbean",
-        longLat: [-78.712509, 21.377507 ],
+        longLat: [-78.712509, 21.377507],
         description: "The Caribbean was one of the two major broad regional markets for slaves from Africa. Over the two centuries when the trade was at its height, the major locations for sugar production, and therefore the major slave markets, shifted from the eastern Caribbean to the west. Here, first Jamaica, then St. Domingue, and finally in the nineteenth century, Cuba, absorbed most of the slaves brought into the region. As this implies, few islands developed self-sustaining populations at any point in the slave trade era. Caribbean ports also sent out more slaving expeditions to Africa than did the North American mainland ports.",
       },
-      europe:{
+      europe: {
         title: "Europe",
         longLat: [15.2551, 54.5260],
         description: "Europe was the starting point for about half of all trans-Atlantic slaving voyages. This traffic dominated the West African to Caribbean section of the slave trade. The major ports were at first located in the Iberian peninsula, but by the eighteenth century northern European ports had become dominant. After 1807, France and the Iberian ports sent out the great majority of European-based slaving voyages. The European consumers’ demand for sugar was the driving force behind 350 years of trans-Atlantic slave trading.",
@@ -59,19 +57,19 @@ export default Ember.Component.extend({
     }
 
     mapboxgl.accessToken = 'pk.eyJ1IjoibXNsZWUiLCJhIjoiclpiTWV5SSJ9.P_h8r37vD8jpIH1A6i1VRg';
-  	var map = new mapboxgl.Map({
-        attributionControl: false,
-  	    container: 'map',
-  	    style: 'mapbox://styles/mslee/cif5p01n202nisaktvljx9mv3',
-        center: [-30, 17], // starting position
-    		zoom: 1, // starting zoom
-        minZoom: 1,
-        maxZoom: 1
-  	});
+    var map = new mapboxgl.Map({
+      attributionControl: false,
+      container: 'map',
+      style: 'mapbox://styles/mslee/cif5p01n202nisaktvljx9mv3',
+      center: [-30, 17], // starting position
+      zoom: 1, // starting zoom
+      minZoom: 1,
+      maxZoom: 1
+    });
     map.scrollZoom.disable();
 
     // create the marker
-    Object.keys(geos).forEach(function(key){
+    Object.keys(geos).forEach(function(key) {
       var longLat = geos[key]["longLat"];
 
       // create DOM element for the marker
@@ -79,25 +77,27 @@ export default Ember.Component.extend({
       el.class = 'mapbox-marker';
 
       // send click to an event handler
-      $(el).on("click", function(){
+      $(el).on("click", function() {
         debugger;
         _that.set('clickedMarker', geos[key]);
       });
 
-      var popup = new mapboxgl.Popup({offset: 25})
-          .setText(geos[key]["title"]);
+      var popup = new mapboxgl.Popup({
+          offset: 25
+        })
+        .setText(geos[key]["title"]);
 
-      new mapboxgl.Marker(el, {offset:[-25, -25]})
-          .setLngLat(longLat)
-          .setPopup(popup) // sets a popup on this marker
-          .addTo(map);
+      new mapboxgl.Marker(el, {
+          offset: [-25, -25]
+        })
+        .setLngLat(longLat)
+        .setPopup(popup) // sets a popup on this marker
+        .addTo(map);
     })
-
   },
 
   actions: {
-    notify: function(item){
-      debugger;
+    notify: function(item) {
       console.log(`item notified ${item}`)
     }
   }
