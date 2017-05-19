@@ -35,8 +35,35 @@ export default Ember.Service.extend({
 
   // stringified version of the current search object
   readable: Ember.computed("currentSearchObj", function() {
+
     var currentSearchObj = this.get("currentSearchObj");
-    return JSON.stringify(this.get('currentSearchObj'));
+    var resultString = "";
+    debugger;
+    if (currentSearchObj){
+      if (currentSearchObj["items"]) {
+        for (var key in currentSearchObj["items"]) {
+          var obj = currentSearchObj["items"][key];
+          if (obj["varName"] == "imp_arrival_at_port_of_dis") {
+            resultString += `Year range is between ${obj["searchTerm"][0]} and ${obj["searchTerm"][1]}; `;
+          } else if (obj["varName"] == "voyage_id") {
+            if (obj["op"] == "is between") {
+              resultString += `Voyage ID is between ${obj["searchTerm"][0]} and ${obj["searchTerm"][1]}; `;
+            } else {
+              resultString += `Voyage ID ${obj["op"]} ${obj["searchTerm"][0]}; `;
+            }
+          } else if (obj["varName"] == "ship_name") {
+            resultString += `Vessel's name contains ${obj["searchTerm"]}; `;
+          } else if (obj["varName"] == "owner") {
+            resultString += `Owner's name contains ${obj["searchTerm"]}; `;
+          } else if (obj["varName"] == "captain") {
+            resultString += `Captain's name contains ${obj["searchTerm"]}; `;
+          }
+        }
+      }
+    }
+
+    return resultString;
+    // return JSON.stringify(this.get('currentSearchObj'));
   }),
 
   // function to reset this search filter to initial state
