@@ -38,7 +38,6 @@ export default Ember.Service.extend({
 
     var currentSearchObj = this.get("currentSearchObj");
     var resultString = "";
-    debugger;
     if (currentSearchObj){
       if (currentSearchObj["items"]) {
         for (var key in currentSearchObj["items"]) {
