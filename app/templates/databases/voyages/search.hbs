@@ -115,19 +115,30 @@
     {{/if}}
 
     {{#if voyagesSearch.showReset}}
+      <span class="search-bar-button" {{action "saveSearch"}}> Save as Link </span>
       <!-- <span class="search-bar-button" {{action "resetAll"}}>Reset all</span> -->
     {{/if}}
 
-    {{#menu-aim}}
-      <div class="dropdown padding-left-none pull-right">
-        <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          {{fa-icon "share-alt" size=11}}
-        </span>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="time-range">
-          <li><a href="#">Shareable search</a></li>
-        </ul>
-      </div>
-    {{/menu-aim}}
+    <div class="dropdown padding-left-none pull-right">
+      <span class="dropdown-toggle search-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {{fa-icon "share-alt" size=11}}
+      </span>
+
+      <ul class="dropdown-menu" role="menu" aria-labelledby="time-range" style="width: 400px; min-height: 250px;padding: 0em 2em;">
+        <h3 class="menu-canvas-title">Shareable Saved Searches</h3>
+        <div class="menu-canvas-content">
+          <div class="menu-item-description">You can click on each search to get a permanent link</div>
+          {{#each model as |link|}}
+            <li>
+              <span style="margin-top: 10px; display:inline-block;">{{link.name}}</span>
+              <button class="btn btn-danger btn-xs link-btn" {{action 'deleteLink' link}}>Delete</button>
+              <button class="btn btn-success btn-xs link-btn" {{action 'getURL' link}}>Get URL</button>
+            </li>
+          {{/each}}
+        </div>
+
+      </ul>
+    </div>
 
     {{#menu-aim}}
       {{#control-settings}}{{/control-settings}}
