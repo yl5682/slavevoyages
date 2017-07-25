@@ -18,7 +18,7 @@ $warn: "pink";
 // For the time being they are all in one file (mostly) for now
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif !important;
 
   a {
     cursor: pointer;
@@ -322,7 +322,7 @@ footer {
 }
 
 .wrapper {
-  margin-bottom: 120px;
+  // margin-bottom: 120px;
   height: 100%;
 }
 

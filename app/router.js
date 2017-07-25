@@ -25,6 +25,10 @@ Router.map(function() {
     this.route('african-names', function() {});
   });
   this.route('gallery');
+
+  this.route('home', function() {
+    this.route('1');
+  });
 });
 
 export default Router;
