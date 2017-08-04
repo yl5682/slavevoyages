@@ -78,7 +78,7 @@ $warn: "pink";
   padding-right: 30px;
   background-color: #22BED5;
   box-shadow: 0 2px 5px rgba(0,0,0,.26);
-  height: 87px;
+  // height: 87px;
 }
 
 h1 {
@@ -92,7 +92,7 @@ h1 {
 .dropdown {
   // cursor: pointer;
   float: left;
-  padding: 0.5em 1em;
+  // padding: 0.5em 1em;
 }
 
 .dropdown-menu > li > a:focus {
@@ -112,7 +112,7 @@ h1 {
   position: absolute;
   left: 0;
   display: none;
-  border-radius: 0 4px 4px 0;
+  // border-radius: 0 4px 4px 0;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-left: 1px solid #B6B6B6;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.175);
@@ -127,8 +127,8 @@ h1 {
 }
 
 .dropdown-menu {
-  border-radius: 4px 0 0 4px;
-  margin: 0;
+  // border-radius: 4px 0 0 4px;
+  // margin: 0;
 }
 
 .menu-canvas-title {
@@ -172,7 +172,7 @@ span.badge {
 }
 
 .dropdown-menu > li > a {
-  width: 270px;
+  // width: 270px;
   clear: left;
 }
 
@@ -363,8 +363,20 @@ footer {
 }
 // menu-aim
 .dropdown-menu {
-  min-height: 400px;
+  background: rgba(255,255,255,0.8)
+  // min-height: 400px;
 }
+
+.navbar-nav > li > .dropdown-menu {
+  left: 0;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus, .nav > li > a:focus {
+  background: none;
+  font-weight: 600;
+}
+
+
 // footer-logo
 .footer-logo {
   height: 6em;

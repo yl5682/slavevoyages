@@ -2,105 +2,511 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+  <link rel="stylesheet" href="css/main.css">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+</head>
+
+<body>
+  <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default navbar-custom">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+        <a class="navbar-brand" href="#">Slave Voyages</a>
       </div>
-    </nav>
+      <div id="navbar" class="navbar-collapse collapse">
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Trans-Atlantic <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">about</a></li>
+              <li><a href="#">database</a></li>
+              <li><a href="#">estimates</a></li>
+              <!-- <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li> -->
+              <li><a href="#">downloads</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">contribute</a></li>
+            </ul>
+          </li>
+
+          <!-- <li class="active"><a href="./">Trans-Atlantic <span class="sr-only">(current)</span></a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Intra-American <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">about</a></li>
+              <li><a href="#">database</a></li>
+              <!-- <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li> -->
+              <li><a href="#">downloads</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">contribute</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">People of Atlantic Slave Trade <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">about</a></li>
+              <li><a href="#">database</a></li>
+              <!-- <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li> -->
+              <li><a href="#">downloads</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">contribute</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">image galleries</a></li>
+              <li><a href="#">educational resources</a></li>
+              <li><a href="#">external links</a></li>
+              <!-- <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li> -->
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">history</a></li>
+              <li><a href="#">project team</a></li>
+              <li><a href="#">contributor of data</a></li>
+              <li><a href="#">acknowledgements</a></li>
+              <li><a href="#">contact</a></li>
+              <!-- <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li> -->
+            </ul>
+          </li>
+
+          <li><a href="../navbar-fixed-top/">EN</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+
+
+
+  <div id="bgvid-container">
+
+    <section id="home-welcome">
+      <div class="col-md-12">
+        <h1 class="home-welcome-title">Explore the movement of slaves around the Atlantic world</h1>
+        <p class="home-welcome-article">        Over 12.5 million Africans were forcibly embarked for the Americas between the sixteenth and nineteenth centuries. Survivors were often subjected to a grueling second journey upon arrival. Drawing on the extensive records left by the largest forced movement of people in global history, slavevoyages provides details of 36,000 transatlantic, and 10,000 intra-American slave voyages as well as the names of 92,000 African captives who were on board them.
+</p>
+      </div>
+    </section>
+    <div class="col-md-12 arrow">
+      scroll down to learn more
+    </div>
+
+    <!-- <div class="logo">
+      <img src="img/emory_lits_logo.svg" style="height: 90px; opacity: 0.6; padding-left: 6rem; position: absolute; bottom: 10%;">
+    </div> -->
+
+
+    <video id="bgvid" playsinline autoplay muted loop preload>
+        <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+        <source src="http://lifepenpal.com/wp-content/uploads/2017/07/short-warp-3.webm" type="video/webm">
+        <source src="/assets/videos/short-warp-2.mp4" type="video/mp4">
+      </video>
+
+
+
+  </div>
+
+
+
+  <section id="home-sections">
+    <div style="padding: 0 15px;" >
+      <div style="padding: 0 4rem; font-size: 2rem; font-weight: 700; color: #dddddd; " class="col-md-12">
+        Special Features</div>
+    </div>
+    <div class="feature-container">
+
+
+
+      <div class="col-md-4 feature-box">
+        <h3 class="feature-title">Introductory Maps</h3>
+        <p>Nullam id dignissim lacus, in eleifend neque. Pellentesque rutrum in id congue ligula.</p>
+      </div>
+      <div class="col-md-4 feature-box">
+        <h3 class="feature-title">Time and Chronology</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet efficitur eros sit amet tristique. </p>
+
+      </div>
+      <div class="col-md-4 feature-box">
+        <h3 class="feature-title">Animation</h3>
+        <p>Mauris tristique risus ac tincidunt varius. Phasellus imperdiet tincidunt tellus tempor vulputate. </p>
+      </div>
+      <!-- <div class="col-md-3 feature-box">
+        <h3 class="title">Resources</h3>
+        <p>
+          <a>images</a> |
+          <a>education</a> |
+          <a>external links</a>
+        </p>
+        <p>Images include primary source images from historical archives. A variety of lesson plans spanning a range of grade levels have been developed to offer teachers diverse approaches. </p>
+
+      </div> -->
+    </div>
+
+    <div class="social-container">
+      <div class="social-icon-wrapper"><img src="img/fb.svg" class="social-icon"></img></div>
+      <div class="social-icon-wrapper"><img src="img/instagram.svg" class="social-icon"></img></div>
+      <div class="social-icon-wrapper"><img src="img/youtube.svg" class="social-icon"></img></div>
+      <div class="social-icon-wrapper"> <span class="social-icon">donate to this project</span></div>
+    </div>
+  </section>
+
+
+  <div class="row block" style="background: #1BABC5;">
+    <div data-scroll="toggle(.scaleUpIn, .fromBottomOut) once" class="title" style="color: #fff;">Trans-Atlantic Slave Trades</div>
+
+    <div data-scroll="toggle(.scaleUpIn, .fromBottomOut) once">
+      <div class="links" style="color: #fff;">
+        <a style="color: #fff;">about</a> |
+        <a style="color: #fff;">database</a> |
+        <a style="color: #fff;">estimates</a> |
+        <a style="color: #fff;">downloads</a> |
+        <a style="color: #fff;">contribute</a>
       </div>
     </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    <div class="col-md-6 no-padding">
+      <div class="para" data-scroll="toggle(.scaleUpIn, .fromBottomOut) once" style="color: #efefef;">Over 36,000 transatlantic slaving voyages between the 16th and 19th centuries. Vivamus eget mi lobortis, rutrum velit non, rhoncus nisl. Etiam aliquet, odio nec hendrerit viverra, dui mi sollicitudin nulla, in dignissim dui massa molestie velit.
+        Mauris venenatis dui ante, aliquet dapibus lacus ultrices non. Nunc ac lorem id nunc venenatis ultrices.</div>
+    </div>
+    <div class="col-md-6">
+      <div data-scroll="toggle(.scaleUpIn, .fromRightOut)  text-right">
+        <img src="img/002-south-america.svg" style="width: 38%; position: absolute;  float: right;  right: -10px;    top: -137px;        "></img>
+      </div>
+
+      <div data-scroll="toggle(.scaleUpIn, .fromLeftOut) ">
+        <img src="img/003-north-america.svg" style="      width: 35%;
+    position: absolute;
+    float: right;
+    right: 306px;
+    top: -20px;
+"></img>
+
+
+
+      </div>
+
+
+      <div data-scroll="toggle(.scaleUpIn, .fromBottomOut) ">
+        <img src="img/001-forward.svg" style="      width: 10%;
+    position: absolute;
+    float: right;
+    right: 211px;
+    top: 0px;
+    opacity: 0.8;
+"></img>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <div class="row block" style="background: #6D69B0;">
+    <div data-scroll="toggle(.scaleUpIn, .fromBottomOut) once" class="title" style="color: #fff;">Intra-American Slave Trades</div>
+
+    <div data-scroll="toggle(.scaleUpIn, .fromBottomOut) once">
+      <div class="links" style="color: #fff;">
+        <a style="color: #fff;">about</a> |
+        <a style="color: #fff;">database</a> |
+        <a style="color: #fff;">downloads</a> |
+        <a style="color: #fff;">contribute</a>
+      </div>
+    </div>
+
+    <div class="col-md-6 no-padding">
+      <div class="para" data-scroll="toggle(.scaleUpIn, .fromBottomOut) once" style="color: #efefef;">Sed laoreet feugiat massa, ac hendrerit neque efficitur eu. Quisque magna massa, elementum vehicula ultrices eu, efficitur a ante. Phasellus non ipsum quis nunc condimentum mattis vel a nunc. Quisque a urna at tortor ullamcorper dignissim in a tellus.
+        Nam ornare metus et urna dignissim vulputate. Mauris porta erat libero, nec aliquet felis porta sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In maximus ligula quis fermentum fermentum. </div>
+    </div>
+
+    <div class="col-md-6">
+
+      <div data-scroll="toggle(.scaleUpIn, .fromTopOut) text-right">
+        <img src="img/003-north-america.svg" style="width: 48%; position: absolute;  float: right;  right: 95px;    top: -86px;         "></img>
+      </div>
+
+
+      <div data-scroll="toggle(.scaleUpIn, .fromBottomOut) ">
+        <img src="img/001-forward.svg" style="     width: 10%;
+    position: absolute;
+    right: 43px;
+    top: 140px;
+    transform: rotate(-67deg);
+    opacity: 0.8;
+"></img>
+      </div>
+
+
+      <div data-scroll="toggle(.scaleUpIn, .fromTopOut) ">
+        <img src="img/001-forward.svg" style="      width: 10%;
+    position: absolute;
+    float: right;
+    right: 450px;
+    top: -100px;
+    transform: rotate(106deg);
+    opacity: 0.8;
+"></img>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row block" style="background: #317DCE;">
+    <div data-scroll="toggle(.scaleUpIn, .fromBottomOut) once" class="title" style="color: #fff;">People of Trans-Atlantic Slave Trades</div>
+    <div data-scroll="toggle(.scaleUpIn, .fromBottomOut) once">
+      <div class="links" style="color: #fff;">
+        <a style="color: #fff;">about</a> |
+        <a style="color: #fff;">database</a> |
+        <a style="color: #fff;">downloads</a> |
+        <a style="color: #fff;">contribute</a>
+      </div>
+    </div>
+    <div class="col-md-6 no-padding">
+      <div class="para" data-scroll="toggle(.scaleUpIn, .fromBottomOut) once" style="color: #efefef;">Quisque magna massa, elementum vehicula ultrices eu, efficitur a ante. Phasellus non ipsum quis nunc condimentum mattis vel a nunc. Quisque a urna at tortor ullamcorper dignissim in a tellus. Nam ornare metus et urna dignissim vulputate. Mauris
+        porta erat libero, nec aliquet felis porta sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In maximus ligula quis fermentum fermentum. </div>
+    </div>
+
+    <div class="col-md-6">
+      <div data-scroll="toggle(.scaleUpIn, .fromTopOut) ">
+        <img src="img/002-mask-1.svg" style="      width: 27%;
+    position: absolute;
+    right: 80px;
+    top: -120px;
+    opacity: 0.6;
+      "></img>
+      </div>
+
+      <div data-scroll="toggle(.scaleUpIn, .fromBottomOut) ">
+        <img src="img/003-mask.svg" style="        width: 44%;
+    position: absolute;
+    right: 155px;
+    top: -108px;
+      "></img>
+      </div>
+
+      <!-- <div data-scroll="toggle(.scaleUpIn, .fromTopOut) ">
+        <img src="img/c.svg" style="      width: 10%;
+      position: absolute;
+      float: right;
+      right: 448px;
+      top: 60px;
+      transform: rotate(4deg);
+      "></img>
+      </div> -->
+    </div>
+  </div>
+
+
+  <div class="row block">
+    <div data-scroll="toggle(.scaleUpIn, .fromBottomOut,) once" class="title">Image Galleries</div>
+    <div class="para" data-scroll="toggle(.scaleUpIn, .fromBottomOut) once" style="margin-bottom: 2rem;">
+      Include images that are representations of the trans-Atlantic slave trade, an activity that lasted for centuries, changed over time. With permission from various archives and libraries, selected images enable users to view people, places, artifacts and
+      vessels. Links are provided to relevant voyages in the Voyages Database.
+    </div>
+
+    <div class="para" data-scroll="toggle(.scaleUpIn, .fromBottomOut) once">
+      <div class="col-md-3">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img/1.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title"> manuscripts </h4>
+            <p class="card-text"></p>
+          </div>
         </div>
       </div>
 
-      <hr>
+      <div class="col-md-3">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img/2.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title"> places </h4>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
 
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+      <div class="col-md-3">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img/4.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title"> slaves </h4>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+      <div class="col-md-3">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img/3.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title"> vessels </h4>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
 
-        <script src="js/main.js"></script>
+    </div>
+  </div>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
+
+  <div class="row block" style="background: #F8F8FA;">
+    <div class="col-md-6">
+      <div data-scroll="toggle(.scaleUpIn, .fromBottomOut,) once" class="title">Resources</div>
+      <div class="para" data-scroll="toggle(.scaleUpIn, .fromBottomOut) once" style="margin-bottom: 3rem;">
+        Etiam sit amet pharetra ex. Nullam semper est vestibulum.
+      </div>
+
+      <div class="para" data-scroll="toggle(.scaleUpIn, .fromBottomOut) once">
+        <div class="col-md-6 no-padding">
+          <div class="card" style="">
+            <img class="card-img" src="img/001-link-1.svg" alt="Card image cap" style="width: 20%;  margin-bottom: 4rem;">
+            <div class="card-block">
+              <h4 class="card-title"> Explore resources on the web</h4>
+              <p class="card-text">id sodales magna finibus vel. Donec iaculis massa sem, vitae tristique felis auctor sit amet. Vestibulum lobortis orci dolor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 no-padding">
+          <div class="card" style="">
+            <img class="card-img" src="img/002-library.svg" alt="Card image cap" style="width: 20%; margin-bottom: 4rem;">
+            <div class="card-block">
+              <h4 class="card-title"> Read lesson plans </h4>
+              <p class="card-text">Donec iaculis massa sem, vitae tristique felis auctor sit amet. Vestibulum lobortis orci dolor, in rutrum turpis aliquam in.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="col-md-6">
+      <div data-scroll="toggle(.scaleUpIn, .fromBottomOut,) once" class="title">About</div>
+      <div class="para" data-scroll="toggle(.scaleUpIn, .fromBottomOut) once" style="margin-bottom: 3rem;">
+        Nam blandit lectus non odio ornare vestibulum.
+      </div>
+
+      <div class="para" data-scroll="toggle(.scaleUpIn, .fromBottomOut) once">
+        <div class="col-md-6 no-padding">
+          <div class="card" style="">
+            <img class="card-img" src="img/002-info.svg" alt="Card image cap" style="width: 20%;  margin-bottom: 4rem;">
+            <div class="card-block">
+              <h4 class="card-title"> Learn more about the project</h4>
+              <p class="card-text">Donec iaculis massa sem, vitae tristique itae tristique felis auctor sit amet. Vestibulum lobortis orci dolor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 no-padding">
+          <div class="card" style="">
+            <img class="card-img" src="img/001-email.svg" alt="Card image cap" style="width: 20%; margin-bottom: 4rem;">
+            <div class="card-block">
+              <h4 class="card-title"> Contact us </h4>
+              <p class="card-text">Donristique felis auctorr sit amet. Vestibuis orci dolor, in rutrum turpis aliquam in.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div class=" block" style="padding: 0;">
+
+    <footer class="footer-bottom" style="color: #efefef;">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+          <div class="copyright">
+            <strong class="highlight"> Slave Voyages</strong>
+            <div class="highlight">Copyright 2017 Emory University. Software licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><span class="link" style="color: #eee;">GNU General Public License 3.0</span></a> or later version.</div>
+            <div class="highlight">Some content licensed under <a href="https://creativecommons.org/licenses/by-nc/3.0/us/"><span class="link" style="color: #eee;">Creative Commons Attribution-Non-Commercial 3.0</span></a>.</div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-right">
+          <div class="design highlight">
+            <img src="img/emory_lits_logo.svg" class="footer-logo" style="height: 90px;">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+  <script>
+    window.counter = function() {
+      // this refers to the html element with the data-scroll-showCallback tag
+      var span = this.querySelector('span');
+      var current = parseInt(span.textContent);
+
+      span.textContent = current + 1;
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var trigger = new ScrollTrigger({
+        addHeight: true
+      });
+    });
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500,700" rel="stylesheet">
+
+
+
+  </div>
+  <!-- /container -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+  </script>
+
+  <script src="js/vendor/bootstrap.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+</body>
+
 </html>
