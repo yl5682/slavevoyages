@@ -355,7 +355,7 @@ svg path {
 
 
 .title {
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     font-weight: 600;
     font-size: 4rem;
 }
@@ -365,6 +365,24 @@ svg path {
   font-weight: 400;
 }
 
+
+.sponsor-card {
+  float: left;
+  height: 10rem;
+  display:flex;
+  align-items: center;
+  padding: 2rem;
+  width: 14.29%;
+}
+
+.sponsor-card .sponsor-card-img {
+  /*width: 100%;*/
+}
+.sponsor-card-img {
+  /*width: 14rem;*/
+  width: 100%;
+   max-width: 100%;
+}
 
 /*div.block:nth-child(2n) {
   background: #052841
