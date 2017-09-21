@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <style>
+    * {
+      font-family: "Proxima Nova" !important;
+    }
+
+    .hero,
+    .content {
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .inner {
+      min-height: 600px;
+      position: relative;
+    }
+
+    .hero .inner {
+      background: rgba(0, 0, 0, 0.7) url("img/sv/trans.png") no-repeat;
+      width: 100%;
+      width: 100%;
+      background-size: 100%;
+    }
+
+    .trans-color {
+      color: #008ca8;
+    }
+
+    .intra-color {
+      color: #6C91BF;
+      /* #9D6A89 */
+    }
+
+    .gallery-color {
+      color: #9D6A89;
+    }
+
+    .past-color {
+      color: #47A58A;
+    }
+
+    .db-title-color {
+      color: #bababa;
+    }
+
+    .card-title-color {
+      color: #777777;
+    }
+
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .weight-700 {
+      font-weight: 700;
+    }
+
+    .db-title {
+      font-family: "Proxima Nova";
+    }
+
+
+    .trans-btn {
+      color: #008ca8;
+      border-color: #008ca8;
+    }
+
+    .trans-btn:hover {
+      background-color: #008ca8;
+      border-color: #008ca8;
+    }
+
+    .intra-btn {
+      color: #6C91BF;
+      border-color: #6C91BF;
+    }
+
+    .intra-btn:hover {
+      background-color: #6C91BF;
+      border-color: #6C91BF;
+    }
+
+    .past-btn {
+      color: #47A58A;
+      border-color: #47A58A;
+    }
+
+    .past-btn:hover {
+      background-color: #47A58A;
+      border-color: #47A58A;
+    }
+
+    .band {
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+    }
+
+    .band-image {
+      width: 100%;
+    }
+
+    .block {
+      /*width: 100px;*/
+      /*height: 100%;*/
+      width: 12%;
+      /*background-color: blue;*/
+      margin: 1%;
+    }
+
+    .cover-band {
+      /*background: grey;*/
+      position: absolute;
+      z-index: 1;
+    }
+
+    .cover-color {
+      color: #eeeeee;
+    }
+
+    .special-feature-box {
+      padding: 0.5rem 1rem 1rem 1rem;
+    }
+
+    .special-feature-box:hover {
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+      opacity: 1;
+      /*background: rgba(255,255,255, 0.75);*/
+    }
+
+    .special-feature-box:hover p {
+      /*color: #545454;*/
+      opacity: 1;
+    }
+
+    .special-feature-box:hover a {
+      /*color: #353535;*/
+      opacity: 1;
+    }
+
+    .special-feature-box:hover .special-feature-title {
+      /*color: #353535;*/
+      opacity: 1;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+    }
+
+    .special-feature-box:hover .special-feature-desc {
+      opacity: 0.95;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+    }
+
+    .special-feature {
+      /*padding: 0 4rem;*/
+      font-size: 1rem;
+      font-weight: 700;
+      color: #dddddd;
+      opacity: 0.8;
+    }
+
+    .special-feature-container {
+      margin-top: 3rem;
+    }
+
+    .special-feature-title {
+      color: #00abc7;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 0;
+      opacity: 0.7;
+    }
+
+    .special-feature-desc {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #dddddd;
+      opacity: 0.75;
+    }
+
+
+
+    .social-icon {
+      width: 1.5rem;
+      opacity: 0.5;
+      color: #dddddd;
+    }
+
+    .social-icon:hover {
+      opacity: 1;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+      cursor: pointer;
+      color: #dddddd;
+    }
+
+    .social-container {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .social-icon-wrapper {
+      float: left;
+      padding-right: 15px;
+    }
+
+    .scroll-text {
+      color: #dddddd;
+    }
+    /* Video */
+
+    #bgvid-container {
+      background: black;
+      /*position: fixed;*/
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+
+    video#bgvid {
+      /*position: fixed;*/
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      background-color: rgba(67, 45, 31, 1);
+      opacity: .3;
+    }
+
+
+    #home-welcome {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      line-height: normal;
+      position: absolute;
+      z-index: 1;
+      color: #dddddd;
+      top: 20%;
+      width: 80%;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    .scroll {
+      color: #dddddd;
+      opacity: 0.5;
+    }
+
+
+    .cover-start {
+      margin-top: 10rem;
+    }
+
+    .cover-center {
+      margin-top: 8rem;
+    }
+
+    .cover-end {
+      margin-top: 0rem;
+    }
+
+    .navbar {
+      margin-top: 2rem;
+      z-index: 2;
+      position: absolute;
+      background: none !important;
+      border: none;
+      width: 100%;
+      font-family: "Proxima Nova";
+    }
+
+    .nav-item {
+      padding-right: 1rem;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, .9);
+    }
+
+    .navbar-dark .navbar-nav .nav-link:focus,
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: #fff;
+    }
+
+    .navbar-dark .navbar-nav .active>.nav-link,
+    .navbar-dark .navbar-nav .nav-link.active,
+    .navbar-dark .navbar-nav .nav-link.show,
+    .navbar-dark .navbar-nav .show>.nav-link {
+      color: #fff;
+    }
+    /* Large devices (desktops, 992px and up) */
+
+    @media (max-width: 992px) {
+      .navbar-collapse {
+        background: #000000;
+        opacity: 0.95;
+        padding: 1rem;
+        border-radius: 5px;
+      }
+    }
+
+    .card-title {
+      margin-left: 0.5rem;
+    }
+
+    .highlight {
+      font-size: .75rem;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a href="/" class="navbar-brand">Slave Voyages</a>
+      <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar9">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+      <div class="navbar-collapse collapse" id="navbar9">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Trans-Atlantic</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">About</a>
+              <a class="dropdown-item" href="#">Database</a>
+              <a class="dropdown-item" href="#">Estimates</a>
+              <a class="dropdown-item" href="#">Essays</a>
+              <a class="dropdown-item" href="#">Downloads</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Contribute</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Intra-America</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">About</a>
+              <a class="dropdown-item" href="#">Database</a>
+              <a class="dropdown-item" href="#">Downloads</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Contribute</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">People of Atlantic Slave Trade</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">About</a>
+              <a class="dropdown-item" href="#">Database</a>
+              <a class="dropdown-item" href="#">Downloads</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Contribute</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Image Galleries</a>
+              <a class="dropdown-item" href="#">Lesson Plans</a>
+              <a class="dropdown-item" href="#">External Links</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">About</a>
+              <a class="dropdown-item" href="#">History</a>
+              <a class="dropdown-item" href="#">Project Team</a>
+              <a class="dropdown-item" href="#">Contributors of Data</a>
+              <a class="dropdown-item" href="#">Acknowledgements</a>
+              <a class="dropdown-item" href="#">African Origins Project</a>
+              <a class="dropdown-item" href="#">Contact Us</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">English</a>
+              <a class="dropdown-item" href="#">Português</a>
+            </div>
+          </li>
+
+          <!-- <li class="nav-item">
+                        <a class="nav-link" href="//codeply.com">Codeply</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="bgvid-container">
+
+    <div class="container">
+      <div class="row">
+        <div class="row align-items-center cover-band">
+          <div class="col-md-10">
+            <div class="col align-self-start cover-start">
+              <h1 class="uppercase cover-color weight-700 db-title">EXPLORE THE MOVEMENT OF SLAVES</h1>
+              <h1 class="uppercase cover-color weight-700 db-title">AROUND THE ATLANTIC WORLD</h1>
+              <p class="cover-color">Over 12.5 million Africans were forcibly embarked for the Americas between the sixteenth and nineteenth centuries – the largest coerced movement of people in global history. Many thousands of the survivors experienced grueling additional
+                journeys within the Americas. Drawing on extensive archival records, the three databases below provide details of 36,000 Trans-Atlantic and 10,000 Intra-American slave voyages, the names and personal details 92,000 captives in the slave
+                trade.</p>
+            </div>
+
+            <div class="col align-self-center special-feature-container cover-center">
+              <div class="special-feature">Special Features</div>
+              <div class="row align-items-center">
+                <div class="special-feature-box col-md-4">
+                  <div class="special-feature-title">Introductory Maps</div>
+                  <div class="special-feature-desc">An overview of the slave trade history using a series of maps </div>
+                </div>
+
+                <div class="special-feature-box col-md-4">
+                  <div class="special-feature-title">Time and Chronology</div>
+                  <div class="special-feature-desc">Number of captives embarked and disembarked per year </div>
+                </div>
+
+                <div class="special-feature-box col-md-4">
+                  <div class="special-feature-title">Animation</div>
+                  <div class="special-feature-desc">View the slave trade movements in animation on map </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col align-self-end cover-end">
+              <div class="social-container">
+                <div class="social-icon-wrapper"><img src="img/fb.svg" class="social-icon"></img>
+                </div>
+                <div class="social-icon-wrapper"><img src="img/instagram.svg" class="social-icon"></img>
+                </div>
+                <div class="social-icon-wrapper"><img src="img/youtube.svg" class="social-icon"></img>
+                </div>
+                <div class="social-icon-wrapper"> <span class="social-icon">donate to this project</span> <span class="scroll"> - scroll down to learn more</span></div>
+                <div class=''><img class="" src="img/logos/emory_lits_logo_front.svg" alt="" style="height: 50px; opacity: 0.8;     position: absolute; right: 0;"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- <div class="logo">
+            <img src="img/emory_lits_logo.svg" style="height: 90px; opacity: 0.6; padding-left: 6rem; position: absolute; bottom: 10%;">
+          </div> -->
+
+        </div>
+
+      </div>
+    </div>
+
+    <video id="bgvid" playsinline autoplay muted loop preload>
+      <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+      <!-- <source src="http://lifepenpal.com/wp-content/uploads/2017/07/short-warp-3.webm" type="video/webm"> -->
+      <source src="http://lifepenpal.com/wp-content/uploads/2017/09/seq1.webm" type="video/webm">
+      <source src="/assets/videos/short-warp-2.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+
+      <div class="row align-items-center ">
+        <div class="col-md-8 band">
+          <div class="col align-self-start">
+            <h1 class="uppercase trans-color weight-700 db-title">Trans-Atlantic</h1>
+            <h1 class="uppercase db-title-color weight-700 db-title">Slave Trade Database</h1>
+          </div>
+          <div class="col align-self-center">
+            <p class="trans-color">The Trans-Atlantic Slave Trade Database has information on almost 36,000 slaving voyages that forcibly embarked more than 12 million Africans for transportation to the Americas between the sixteenth and nineteenth centuries. Drawing from port
+              records, merchant accounts, newspapers, and other primary sources, the database compiles information about slave trading routes, demographics, owners of ships, and enslaved people’s resistance. The database and a separate estimates interface
+              offer scholarly researchers, students, and the general public a chance to discover the reality of the largest forced migration in world history.</p>
+
+          </div>
+          <div class="col align-self-end">
+            <button class="btn btn-outline-primary trans-btn">About</button>
+            <button class="btn btn-outline-primary trans-btn">Database</button>
+            <button class="btn btn-outline-primary trans-btn">Estimates</button>
+            <button class="btn btn-outline-primary trans-btn">Essays</button>
+            <button class="btn btn-outline-primary trans-btn">Downloads</button>
+            <button class="btn btn-outline-primary trans-btn">Contribute</button>
+
+          </div>
+
+
+        </div>
+        <div class="col-md-4 band">
+          <img class="band-image" src="img/sv/trans1.png">
+        </div>
+      </div>
+
+
+
+      <div class="row align-items-center ">
+        <div class="col-md-4 band">
+          <img class="band-image" src="img/sv/intra3.png">
+        </div>
+        <div class="col-md-8 band">
+          <div class="col align-self-start">
+            <h1 class="uppercase intra-color weight-700 db-title">Intra-America</h1>
+            <h1 class="uppercase db-title-color weight-700 db-title">Slave Trade Database</h1>
+          </div>
+          <div class="col align-self-center">
+            <p class="intra-color">The Intra-American Slave Trade Database contains information on approximately 10,000 slave voyages within the Americas. These voyages operated within colonial empires, across imperial boundaries, and inside the borders of nations such as the
+              United States and Brazil. The database enables users to explore the contours of this enormous New World slave trade, which not only dispersed African survivors of the Atlantic crossing but also displaced enslaved people born in the Americas.
+            </p>
+
+          </div>
+          <div class="col align-self-end">
+            <button class="btn btn-outline-primary intra-btn">About</button>
+            <button class="btn btn-outline-primary intra-btn">Database</button>
+            <button class="btn btn-outline-primary intra-btn">Downloads</button>
+            <button class="btn btn-outline-primary intra-btn">Contribute</button>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+      <div class="row align-items-center ">
+
+
+        <div class="col-md-8 band">
+          <div class="col align-self-start">
+            <h1 class="uppercase past-color weight-700 db-title">People of Trans-Atlantic</h1>
+            <h1 class="uppercase db-title-color weight-700 db-title"> Slave Trade</h1>
+          </div>
+          <div class="col align-self-center">
+            <p class="past-color">People of the Atlantic Slave Trade provides personal details of 91,491 Africans taken from captured slave ships or from African trading sites. It displays the African name, age, gender, origin, country, and places of embarkation and disembarkation
+              of each individual.</p>
+
+          </div>
+          <div class="col align-self-end">
+            <button class="btn btn-outline-primary past-btn">About</button>
+            <button class="btn btn-outline-primary past-btn">Database</button>
+            <button class="btn btn-outline-primary past-btn">Downloads</button>
+            <button class="btn btn-outline-primary past-btn">Contribute</button>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-4 band">
+          <img class="band-image" src="img/sv/past.png">
+        </div>
+      </div>
+
+      <div class="row band">
+        <div class='col-md-12'>
+          <div class="col align-self-start">
+            <h1 class="uppercase gallery-color weight-700 db-title">Image Galleries</h1>
+          </div>
+          <div class="col align-self-center">
+            <p class="gallery-color">Explore several hundred images of the people, places, vessels and manuscripts of the Trans-Atlantic and Intra-American slave trades. Where available, each image contains a link to a corresponding slave voyage in the databases and a reference
+              to the original source.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="">
+            <img class="card-img-top" src="img/1.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title card-title-color "> manuscripts </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="">
+            <img class="card-img-top" src="img/2.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title card-title-color "> places </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="">
+            <img class="card-img-top" src="img/4.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title card-title-color "> slaves </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="">
+            <img class="card-img-top" src="img/3.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title card-title-color "> vessels </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+      <!-- <div class="row align-items-center ">
+
+          <div class="block">
+          </div>
+          <div class="block">
+          </div>
+          <div class="block">
+          </div>
+          <div class="block">
+          </div>
+          <div class="block">
+          </div>
+          <div class="block">
+          </div>
+          <div class="block">
+          </div>
+        </div> -->
+
+    </div>
+  </div>
+
+
+<div class="" style="display:flex; align-items: center; background: #BBC2CB; height: 14rem; margin-top: 4rem;">
+  <img class="card-img sponsor-card-img block" src="img/logos/emory_lits_logo.svg" alt="" style="">
+  <img class="card-img sponsor-card-img block" src="img/logos/ucsc.svg" alt="" style="">
+  <img class="card-img sponsor-card-img block" src="img/logos/victoria.png" alt="" style="">
+  <img class="card-img sponsor-card-img block" src="img/logos/university-of-hull.svg" alt="" style="">
+  <img class="card-img sponsor-card-img block" src="img/logos/ufrj.svg" alt="" style="color: white; fill: white;">
+  <img class="card-img sponsor-card-img block" src="img/logos/hutchins.png" alt="" style="">
+  <img class="card-img sponsor-card-img block" src="img/logos/neh.png" alt="" style="">
+</div>
+
+<footer class="footer-bottom" style="color: #efefef; background-color:#008ca8; ">
+  <div class="row" style="padding: 1rem 2rem;">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+      <div class="copyright">
+        <strong class="highlight">Slave Voyages</strong>
+        <div class="highlight">Copyright 2017 Emory University. Software licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><span class="link" style="color: #eee;">GNU General Public License 3.0</span></a> or later version.</div>
+        <div class="highlight">Some content licensed under <a href="https://creativecommons.org/licenses/by-nc/3.0/us/"><span class="link" style="color: #eee;">Creative Commons Attribution-Non-Commercial 3.0</span></a>.</div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-right">
+      <div class="design highlight">
+        <img src="img/emory_lits_logo.svg" class="footer-logo" style="height: 75px;">
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
+</html>
