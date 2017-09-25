@@ -127,43 +127,49 @@
       /*background: grey;*/
       position: absolute;
       z-index: 1;
-      margin-left: 2rem;
-      margin-right: 2rem;
+      margin: 0 4rem;
     }
 
     .cover-color {
       color: #eeeeee;
     }
 
-    .special-feature-box {
-      padding: 0.5rem 1rem 1rem 1rem;
+    .special-feature-flex-container {
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    .special-feature-box:hover {
+
+    .special-feature-flex-item {
+      padding: 0.5rem 2rem 1rem 0rem;
+      justify-content: space-between;
+    }
+
+    .special-feature-flex-item:hover {
       transition-duration: 0.2s;
       transition-timing-function: ease-in-out;
       opacity: 1;
       /*background: rgba(255,255,255, 0.75);*/
     }
 
-    .special-feature-box:hover p {
+    .special-feature-flex-item:hover p {
       /*color: #545454;*/
       opacity: 1;
     }
 
-    .special-feature-box:hover a {
+    .special-feature-flex-item:hover a {
       /*color: #353535;*/
       opacity: 1;
     }
 
-    .special-feature-box:hover .special-feature-title {
+    .special-feature-flex-item:hover .special-feature-title {
       /*color: #353535;*/
       opacity: 1;
       transition-duration: 0.3s;
       transition-timing-function: ease-in-out;
     }
 
-    .special-feature-box:hover .special-feature-desc {
+    .special-feature-flex-item:hover .special-feature-desc {
       opacity: 0.95;
       transition-duration: 0.3s;
       transition-timing-function: ease-in-out;
@@ -196,13 +202,22 @@
       opacity: 0.75;
     }
 
-
+    .social-icon-container {
+      /*width: 300px;*/
+      justify-content: center;
+      flex-wrap: wrap;
+      /*border: 1px white solid;*/
+    }
 
     .social-icon {
       width: 1.5rem;
       opacity: 0.5;
       color: #dddddd;
       margin: 0 .3rem;
+    }
+
+    .social-icon:first-child {
+      margin-left: 0;
     }
 
     .social-icon:hover {
@@ -213,17 +228,18 @@
       color: #dddddd;
     }
 
-    .social-container {
+    .social-flex-container {
       padding-top: 2rem;
       padding-bottom: 1rem;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
     }
 
-    .social-icon-wrapper {
-      float: left;
-      padding-right: 15px;
+
+    .cover-logo {
+      margin: 1rem 0;
     }
 
     .scroll-text {
@@ -235,8 +251,9 @@
       background: black;
       /*position: fixed;*/
       width: 100%;
-      /*height: 100%;*/
+      height: 100%;
       z-index: 0;
+      overflow: hidden;
     }
 
 
@@ -244,7 +261,8 @@
       /*position: fixed;*/
       min-width: 100%;
       min-height: 100%;
-      width: auto;
+      /*max-height: 100%;*/
+      /*width: auto;*/
       height: auto;
       z-index: 0;
       background-color: rgba(67, 45, 31, 1);
@@ -286,6 +304,7 @@
 
     .navbar {
       margin-top: 2rem;
+      padding: 0 4rem;
       z-index: 2;
       position: absolute;
       background: none !important;
@@ -341,11 +360,11 @@
     }
     @media (max-width: 992px) {
       .site-headline {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
       }
 
       .site-story {
-          font-size: 0.9rem;
+          /*font-size: 0.9rem;*/
       }
 
       .cover-start {
@@ -354,6 +373,22 @@
 
       .design {
         text-align: left;
+      }
+
+
+    }
+
+  @media (max-width: 767px) {
+      .sm-hidden {
+        display: none;
+      }
+
+      .band {
+        margin: 1rem 0;
+      }
+
+      .col-md-4 .band {
+        margin: 0;
       }
     }
 
@@ -401,12 +436,12 @@
     .nav-container {
       margin-right: auto;
       margin-left: auto;
-      padding-right: 15px;
-      padding-left: 15px;
+      /*padding-right: 15px;*/
+      /*padding-left: 15px;*/
       width: 100%;
       flex-wrap: nowrap;
-      margin-left: 2rem;
-      margin-right: 2rem;
+      /*margin-left: 2rem;*/
+      /*margin-right: 2rem;*/
     }
 
     @media (min-width: 1200px) {
@@ -434,8 +469,16 @@
       text-align: center;
     }
 
+    .logo-grid-container {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 0;
+      /*padding: 1rem 4rem;*/
+    }
+
     .logo-grid {
       /*width: 900px;*/
+
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -450,31 +493,34 @@
       display: flex;
     }
 
-    .logo-grid-container {
-      display: flex;
-      justify-content: center;
-      padding: 2rem 0;
+    /*.logo-grid-item:first-child {
+      padding-left: 0;
     }
+
+    .logo-grid-item:last-child {
+      padding-right: 0;
+    }*/
 
     .footer-flex-container {
       display: flex;
       /*align-items: center;*/
       justify-content: space-between;
       flex-wrap: wrap;
+      padding: 0 4rem;
 
     }
 
     .footer-copyrights {
       /*justify-content: space-around;*/
-      border: 1px solid white;
-      margin: 1rem;
+      /*border: 1px solid white;*/
+      margin: 1rem 0;
     }
 
     .footer-logo {
       /*justify-content: space-around;*/
       /*justify-content: flex-end;*/
-      border: 1px solid white;
-      margin: 1rem;
+      /*border: 1px solid white;*/
+      margin: 1rem 0;
     }
 
 
@@ -483,6 +529,7 @@
 </head>
 
 <body>
+
 
   <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
     <div class="nav-container">
@@ -551,7 +598,7 @@
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu dropdown-menu-right">
               <a class="dropdown-item" href="#">English</a>
               <a class="dropdown-item" href="#">Português</a>
             </div>
@@ -573,49 +620,64 @@
 
 
     <div class="align-items-center cover-band">
-      <div class="col-md-12 cover-flex-container">
-        <div class="col align-self-start cover-start">
-          <h1 class="uppercase cover-color weight-700 db-title site-headline">EXPLORE THE MOVEMENT OF SLAVES</h1>
-          <h1 class="uppercase cover-color weight-700 db-title site-headline">AROUND THE ATLANTIC WORLD</h1>
+
+      <div class="cover-flex-container">
+
+        <div class="align-self-start cover-start">
+          <h1 class="uppercase cover-color weight-700 db-title site-headline">EXPLORE THE MOVEMENT OF SLAVES AROUND THE ATLANTIC WORLD</h1>
           <p class="cover-color site-story">Over 12.5 million Africans were forcibly embarked for the Americas between the sixteenth and nineteenth centuries – the largest coerced movement of people in global history. Many thousands of the survivors experienced grueling additional
             journeys within the Americas. Drawing on extensive archival records, the three databases below provide details of 36,000 Trans-Atlantic and 10,000 Intra-American slave voyages, the names and personal details 92,000 captives in the slave
             trade.</p>
         </div>
 
-        <div class="col align-self-center special-feature-container cover-center">
+
+        <div class="align-self-center special-feature-container cover-center">
           <div class="special-feature">Special Features</div>
-          <div class="row align-items-center">
-            <div class="special-feature-box col-sm-12 col-xs-12 col-md-4">
+          <div class="special-feature-flex-container">
+            <div class="special-feature-flex-item">
               <div class="special-feature-title">Introductory Maps</div>
               <div class="special-feature-desc">Overview of slave trade history in a series of maps </div>
             </div>
 
-            <div class="special-feature-box col-sm-12 col-xs-12 col-md-4">
+            <div class="special-feature-flex-item">
               <div class="special-feature-title">Time and Chronology</div>
               <div class="special-feature-desc">Number of captives embarked and disembarked </div>
             </div>
 
-            <div class="special-feature-box col-sm-12 col-xs-12 col-md-4">
+            <div class="special-feature-flex-item">
               <div class="special-feature-title">Animation</div>
               <div class="special-feature-desc">View slave trade movements in animation on map </div>
             </div>
           </div>
         </div>
 
-        <div class="col align-self-end cover-end">
-          <div class="social-container">
-            <div class="social-icon-wrapper">
+        <div class="align-self-end cover-end">
+          <div class="social-flex-container">
+            <div class="social-icon-container">
               <img src="img/fb.svg" class="social-icon"></img>
               <img src="img/instagram.svg" class="social-icon"></img>
               <img src="img/youtube.svg" class="social-icon"></img>
               <span class="social-icon">donate to this project</span>
             </div>
 
-            <div class="cover-logo-container">
-              <img class="" src="img/logos/emory_lits_logo_front.svg" alt="" style="height: 50px; opacity: 0.7; display: flex!important;">
+            <div class="social-icon-container">
+              <img class="cover-logo" src="img/logos/emory_lits_logo_front.svg" alt="" style="height: 50px; opacity: 0.7; display: flex!important;">
             </div>
+
           </div>
-          <div class="scroll"> scroll down to learn more</div>
+
+
+        <div class="social-flex-container">
+          <div class="social-icon-container">
+            <div class="scroll"> scroll down to learn more</div>
+          </div>
+        </div>
+          <!-- <div class="social-flex-container">
+            <div class="scroll-container">
+              <span class="social-icon">  scroll down to learn more</span>
+            </div>
+          </div> -->
+          <!-- <div class="scroll"> scroll down to learn more</div> -->
 
         </div>
 
@@ -633,8 +695,8 @@
     <video id="bgvid" playsinline autoplay muted loop preload>
       <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
       <!-- <source src="http://lifepenpal.com/wp-content/uploads/2017/07/short-warp-3.webm" type="video/webm"> -->
-      <!-- <source src="http://lifepenpal.com/wp-content/uploads/2017/09/seq1.webm" type="video/webm"> -->
-      <source src="http://lifepenpal.com/wp-content/uploads/2017/09/seq2.webm" type="video/webm">
+      <source src="http://lifepenpal.com/wp-content/uploads/2017/09/seq1.webm" type="video/webm">
+      <!-- <source src="http://lifepenpal.com/wp-content/uploads/2017/09/seq2.webm" type="video/webm"> -->
 
       <source src="/assets/videos/short-warp-2.mp4" type="video/mp4">
     </video>
@@ -670,7 +732,7 @@
 
         </div>
         <div class="col-md-4 band">
-          <img class="band-image" src="img/sv/trans1.png">
+          <img class="band-image sm-hidden" src="img/sv/trans1.png">
         </div>
       </div>
 
@@ -678,7 +740,7 @@
 
       <div class="row align-items-center ">
         <div class="col-md-4 band">
-          <img class="band-image" src="img/sv/intra3.png">
+          <img class="band-image sm-hidden" src="img/sv/intra3.png">
         </div>
         <div class="col-md-8 band">
           <div class="col align-self-start">
@@ -732,16 +794,16 @@
         </div>
 
         <div class="col-md-4 band">
-          <img class="band-image" src="img/sv/past.png">
+          <img class="band-image sm-hidden" src="img/sv/past.png">
         </div>
       </div>
 
       <div class="row band">
         <div class='col-md-12'>
-          <div class="col align-self-start">
+          <div class="align-self-start">
             <h1 class="uppercase gallery-color weight-700 db-title">Image Galleries</h1>
           </div>
-          <div class="col align-self-center">
+          <div class="align-self-center">
             <p class="gallery-color">Explore several hundred images of the people, places, vessels and manuscripts of the Trans-Atlantic and Intra-American slave trades. Where available, each image contains a link to a corresponding slave voyage in the databases and a reference
               to the original source.</p>
           </div>
@@ -865,36 +927,31 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
   <script>
+    var reflow = function(){
+      // var coverStartHeight = $(".cover-start").height();
+      // var coverStartMarginTop = $(".cover-start").css("marginTop");
+      // var coverStartMarginBtm = $(".cover-start").css("marginBottom");
+      //
+      // var coverCenterHeight = $(".cover-center").height();
+      // var coverCenterMarginTop = $(".cover-center").css("marginTop");
+      // var coverCenterMarginBtm = $(".cover-center").css("marginBottom");
+      //
+      // var coverEndHeight = $(".cover-end").height();
+      // var coverEndMarginTop = $(".cover-end").css("marginTop");
+      // var coverEndMarginBtm = $(".cover-end").css("marginBottom");
 
+      // var bgvidHeight = coverStartHeight + coverCenterHeight + coverEndHeight + 250;
 
-    // var reflow = function(){
-    //   var coverStartHeight = $(".cover-start").height();
-    //   var coverStartMarginTop = $(".cover-start").css("marginTop");
-    //   var coverStartMarginBtm = $(".cover-start").css("marginBottom");
-    //
-    //   var coverCenterHeight = $(".cover-center").height();
-    //   var coverCenterMarginTop = $(".cover-center").css("marginTop");
-    //   var coverCenterMarginBtm = $(".cover-center").css("marginBottom");
-    //
-    //   var coverEndHeight = $(".cover-end").height();
-    //   var coverEndMarginTop = $(".cover-end").css("marginTop");
-    //   var coverEndMarginBtm = $(".cover-end").css("marginBottom");
-    //
-    //   var bgvidHeight = coverStartHeight + coverCenterHeight + coverEndHeight + 250;
-    //   var window_height = $( window ).height();
-    //   var cover_height = $("#bgvid").height();
-    //
-    //   if (cover_height < window_height) {
-    //     var coverCenterMarginTop = window_height * 0.45;
-    //     var coverCenterMarginTop = $(".cover-center").css("marginTop", coverCenterMarginTop);
-    //     $("#bgvid").height(window_height);
-    //   } else {
-    //     $("#bgvid").height(bgvidHeight);
-    //   }
-    // }
-    //
+      var coverBandHeight = $(".cover-band").height();
+
+      var window_height = $( window ).height();
+      var cover_height = $("#bgvid").height();
+      var visible_height = $(window.top).height();
+
+      $("#bgvid").height(coverBandHeight);
+    }
+
     // $( document ).ready( reflow );
-    //
     //
     // window.onresize = function() {
     //   reflow();
