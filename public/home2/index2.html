@@ -37,6 +37,10 @@
       color: #008ca8;
     }
 
+    .normal-color {
+      color: #777777;
+    }
+
     .intra-color {
       color: #6C91BF;
       /* #9D6A89 */
@@ -56,6 +60,7 @@
 
     .card-title-color {
       color: #777777;
+      margin-top: 1rem;
     }
 
     .uppercase {
@@ -113,15 +118,17 @@
     .block {
       /*width: 100px;*/
       /*height: 100%;*/
-      width: 12%;
+      /*width: 12%;*/
       /*background-color: blue;*/
-      margin: 1%;
+      /*margin: 15px;*/
     }
 
     .cover-band {
       /*background: grey;*/
       position: absolute;
       z-index: 1;
+      margin-left: 2rem;
+      margin-right: 2rem;
     }
 
     .cover-color {
@@ -195,6 +202,7 @@
       width: 1.5rem;
       opacity: 0.5;
       color: #dddddd;
+      margin: 0 .3rem;
     }
 
     .social-icon:hover {
@@ -207,9 +215,10 @@
 
     .social-container {
       padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
 
     .social-icon-wrapper {
@@ -226,7 +235,7 @@
       background: black;
       /*position: fixed;*/
       width: 100%;
-      height: 100%;
+      /*height: 100%;*/
       z-index: 0;
     }
 
@@ -239,7 +248,7 @@
       height: auto;
       z-index: 0;
       background-color: rgba(67, 45, 31, 1);
-      opacity: .3;
+      opacity: .25;
     }
 
 
@@ -259,6 +268,7 @@
     .scroll {
       color: #dddddd;
       opacity: 0.5;
+      text-align: center;
     }
 
 
@@ -267,7 +277,7 @@
     }
 
     .cover-center {
-      margin-top: 8rem;
+      margin-top: 6rem;
     }
 
     .cover-end {
@@ -314,30 +324,168 @@
     }
     /* Large devices (desktops, 992px and up) */
 
-    @media (max-width: 992px) {
+    /* original large device */
+    @media (max-width: 1200px) {
       .navbar-collapse {
-        background: #000000;
+        margin-top: 1rem;
+        background: #38393B;
         opacity: 0.95;
         padding: 1rem;
         border-radius: 5px;
       }
     }
 
-    .card-title {
+    .design {
+      margin: 1rem 0;
+      text-align: right;
+    }
+    @media (max-width: 992px) {
+      .site-headline {
+        font-size: 1.25rem;
+      }
+
+      .site-story {
+          font-size: 0.9rem;
+      }
+
+      .cover-start {
+        margin-top: 8rem;
+      }
+
+      .design {
+        text-align: left;
+      }
+    }
+
+
+
+  .trans-btn, .intra-btn, .past-btn {
+    margin-top: .25rem;
+    margin-right: .25rem;
+    margin-bottom: .25rem;
+
+
+  }
+    /*@media (max-width: 1160px) {
+      .navbar-collapse {
+        background: #000000;
+        opacity: 0.95;
+        padding: 1rem;
+        border-radius: 5px;
+      }
+    }*/
+
+    /*@media (min-width: 1160px) {
+      .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+      }
+    }
+
+    @media (min-width: 992px){
+      .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox!important;
+        display: flex!important;
+      }
+    }*/
+
+    .sv-card-title {
       margin-left: 0.5rem;
     }
 
     .highlight {
       font-size: .75rem;
     }
+
+
+    .nav-container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 15px;
+      padding-left: 15px;
+      width: 100%;
+      flex-wrap: nowrap;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    @media (min-width: 1200px) {
+      .nav-container {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .card-resource-img-top {
+      width: 25%;
+      margin: auto;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-text {
+      color: #777777;
+
+    }
+
+    .card-title {
+      color: #777777;
+      text-align: center;
+    }
+
+    .logo-grid {
+      /*width: 900px;*/
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-grid-item {
+      /*border: 1px solid #fff;*/
+      width: 200px;
+      height: 100px;
+      padding: 0 15px;
+      align-items: center;
+      display: flex;
+    }
+
+    .logo-grid-container {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 0;
+    }
+
+    .footer-flex-container {
+      display: flex;
+      /*align-items: center;*/
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+    }
+
+    .footer-copyrights {
+      /*justify-content: space-around;*/
+      border: 1px solid white;
+      margin: 1rem;
+    }
+
+    .footer-logo {
+      /*justify-content: space-around;*/
+      /*justify-content: flex-end;*/
+      border: 1px solid white;
+      margin: 1rem;
+    }
+
+
   </style>
 
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+  <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="nav-container">
       <a href="/" class="navbar-brand">Slave Voyages</a>
       <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar9">
                 <span class="navbar-toggler-icon"></span>
@@ -423,68 +571,71 @@
 
   <div id="bgvid-container">
 
-    <div class="container">
-      <div class="row">
-        <div class="row align-items-center cover-band">
-          <div class="col-md-10">
-            <div class="col align-self-start cover-start">
-              <h1 class="uppercase cover-color weight-700 db-title">EXPLORE THE MOVEMENT OF SLAVES</h1>
-              <h1 class="uppercase cover-color weight-700 db-title">AROUND THE ATLANTIC WORLD</h1>
-              <p class="cover-color">Over 12.5 million Africans were forcibly embarked for the Americas between the sixteenth and nineteenth centuries – the largest coerced movement of people in global history. Many thousands of the survivors experienced grueling additional
-                journeys within the Americas. Drawing on extensive archival records, the three databases below provide details of 36,000 Trans-Atlantic and 10,000 Intra-American slave voyages, the names and personal details 92,000 captives in the slave
-                trade.</p>
+
+    <div class="align-items-center cover-band">
+      <div class="col-md-12 cover-flex-container">
+        <div class="col align-self-start cover-start">
+          <h1 class="uppercase cover-color weight-700 db-title site-headline">EXPLORE THE MOVEMENT OF SLAVES</h1>
+          <h1 class="uppercase cover-color weight-700 db-title site-headline">AROUND THE ATLANTIC WORLD</h1>
+          <p class="cover-color site-story">Over 12.5 million Africans were forcibly embarked for the Americas between the sixteenth and nineteenth centuries – the largest coerced movement of people in global history. Many thousands of the survivors experienced grueling additional
+            journeys within the Americas. Drawing on extensive archival records, the three databases below provide details of 36,000 Trans-Atlantic and 10,000 Intra-American slave voyages, the names and personal details 92,000 captives in the slave
+            trade.</p>
+        </div>
+
+        <div class="col align-self-center special-feature-container cover-center">
+          <div class="special-feature">Special Features</div>
+          <div class="row align-items-center">
+            <div class="special-feature-box col-sm-12 col-xs-12 col-md-4">
+              <div class="special-feature-title">Introductory Maps</div>
+              <div class="special-feature-desc">Overview of slave trade history in a series of maps </div>
             </div>
 
-            <div class="col align-self-center special-feature-container cover-center">
-              <div class="special-feature">Special Features</div>
-              <div class="row align-items-center">
-                <div class="special-feature-box col-md-4">
-                  <div class="special-feature-title">Introductory Maps</div>
-                  <div class="special-feature-desc">An overview of the slave trade history using a series of maps </div>
-                </div>
-
-                <div class="special-feature-box col-md-4">
-                  <div class="special-feature-title">Time and Chronology</div>
-                  <div class="special-feature-desc">Number of captives embarked and disembarked per year </div>
-                </div>
-
-                <div class="special-feature-box col-md-4">
-                  <div class="special-feature-title">Animation</div>
-                  <div class="special-feature-desc">View the slave trade movements in animation on map </div>
-                </div>
-              </div>
+            <div class="special-feature-box col-sm-12 col-xs-12 col-md-4">
+              <div class="special-feature-title">Time and Chronology</div>
+              <div class="special-feature-desc">Number of captives embarked and disembarked </div>
             </div>
 
-            <div class="col align-self-end cover-end">
-              <div class="social-container">
-                <div class="social-icon-wrapper"><img src="img/fb.svg" class="social-icon"></img>
-                </div>
-                <div class="social-icon-wrapper"><img src="img/instagram.svg" class="social-icon"></img>
-                </div>
-                <div class="social-icon-wrapper"><img src="img/youtube.svg" class="social-icon"></img>
-                </div>
-                <div class="social-icon-wrapper"> <span class="social-icon">donate to this project</span> <span class="scroll"> - scroll down to learn more</span></div>
-                <div class=''><img class="" src="img/logos/emory_lits_logo_front.svg" alt="" style="height: 50px; opacity: 0.8;     position: absolute; right: 0;"></div>
-              </div>
-
+            <div class="special-feature-box col-sm-12 col-xs-12 col-md-4">
+              <div class="special-feature-title">Animation</div>
+              <div class="special-feature-desc">View slave trade movements in animation on map </div>
             </div>
-
           </div>
+        </div>
 
+        <div class="col align-self-end cover-end">
+          <div class="social-container">
+            <div class="social-icon-wrapper">
+              <img src="img/fb.svg" class="social-icon"></img>
+              <img src="img/instagram.svg" class="social-icon"></img>
+              <img src="img/youtube.svg" class="social-icon"></img>
+              <span class="social-icon">donate to this project</span>
+            </div>
 
-          <!-- <div class="logo">
-            <img src="img/emory_lits_logo.svg" style="height: 90px; opacity: 0.6; padding-left: 6rem; position: absolute; bottom: 10%;">
-          </div> -->
+            <div class="cover-logo-container">
+              <img class="" src="img/logos/emory_lits_logo_front.svg" alt="" style="height: 50px; opacity: 0.7; display: flex!important;">
+            </div>
+          </div>
+          <div class="scroll"> scroll down to learn more</div>
 
         </div>
 
       </div>
+
+
+      <!-- <div class="logo">
+        <img src="img/emory_lits_logo.svg" style="height: 90px; opacity: 0.6; padding-left: 6rem; position: absolute; bottom: 10%;">
+      </div> -->
+
     </div>
+
+
 
     <video id="bgvid" playsinline autoplay muted loop preload>
       <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
       <!-- <source src="http://lifepenpal.com/wp-content/uploads/2017/07/short-warp-3.webm" type="video/webm"> -->
-      <source src="http://lifepenpal.com/wp-content/uploads/2017/09/seq1.webm" type="video/webm">
+      <!-- <source src="http://lifepenpal.com/wp-content/uploads/2017/09/seq1.webm" type="video/webm"> -->
+      <source src="http://lifepenpal.com/wp-content/uploads/2017/09/seq2.webm" type="video/webm">
+
       <source src="/assets/videos/short-warp-2.mp4" type="video/mp4">
     </video>
 
@@ -506,7 +657,7 @@
               offer scholarly researchers, students, and the general public a chance to discover the reality of the largest forced migration in world history.</p>
 
           </div>
-          <div class="col align-self-end">
+          <div class="col align-self-end band-buttons">
             <button class="btn btn-outline-primary trans-btn">About</button>
             <button class="btn btn-outline-primary trans-btn">Database</button>
             <button class="btn btn-outline-primary trans-btn">Estimates</button>
@@ -540,12 +691,11 @@
             </p>
 
           </div>
-          <div class="col align-self-end">
+          <div class="col align-self-end band-buttons">
             <button class="btn btn-outline-primary intra-btn">About</button>
             <button class="btn btn-outline-primary intra-btn">Database</button>
             <button class="btn btn-outline-primary intra-btn">Downloads</button>
             <button class="btn btn-outline-primary intra-btn">Contribute</button>
-
           </div>
 
 
@@ -571,7 +721,7 @@
               of each individual.</p>
 
           </div>
-          <div class="col align-self-end">
+          <div class="col align-self-end band-buttons">
             <button class="btn btn-outline-primary past-btn">About</button>
             <button class="btn btn-outline-primary past-btn">Database</button>
             <button class="btn btn-outline-primary past-btn">Downloads</button>
@@ -598,40 +748,40 @@
         </div>
 
         <div class="col-md-3">
-          <div class="card" style="">
+          <div class=" col" style="">
             <img class="card-img-top" src="img/1.jpg" alt="Card image cap">
             <div class="card-block">
-              <h4 class="card-title card-title-color "> manuscripts </h4>
+              <h4 class="sv-card-title card-title-color "> manuscripts </h4>
               <p class="card-text"></p>
             </div>
           </div>
         </div>
 
         <div class="col-md-3">
-          <div class="card" style="">
+          <div class=" col" style="">
             <img class="card-img-top" src="img/2.jpg" alt="Card image cap">
             <div class="card-block">
-              <h4 class="card-title card-title-color "> places </h4>
+              <h4 class="sv-card-title card-title-color "> places </h4>
               <p class="card-text"></p>
             </div>
           </div>
         </div>
 
         <div class="col-md-3">
-          <div class="card" style="">
+          <div class=" col" style="">
             <img class="card-img-top" src="img/4.jpg" alt="Card image cap">
             <div class="card-block">
-              <h4 class="card-title card-title-color "> slaves </h4>
+              <h4 class="sv-card-title card-title-color "> slaves </h4>
               <p class="card-text"></p>
             </div>
           </div>
         </div>
 
         <div class="col-md-3">
-          <div class="card" style="">
+          <div class=" col" style="">
             <img class="card-img-top" src="img/3.jpg" alt="Card image cap">
             <div class="card-block">
-              <h4 class="card-title card-title-color "> vessels </h4>
+              <h4 class="sv-card-title card-title-color "> vessels </h4>
               <p class="card-text"></p>
             </div>
           </div>
@@ -642,6 +792,21 @@
 
 
 
+      <div class="row align-items-center " style="margin: 4rem 0;">
+
+        <div class='col-md-12'>
+          <div class=" align-self-start">
+            <h1 class="uppercase normal-color weight-700 db-title">Resources and About</h1>
+          </div>
+          <div class=" align-self-center">
+            <p class="normal-color">Further explore the Atlantic slave trade using the links and lesson plans. Learn the history of the Slave Voyages project and contact the project’s editors.</p>
+          </div>
+        </div>
+
+
+
+
+      </div>
 
 
 
@@ -667,20 +832,20 @@
     </div>
   </div>
 
-
-<div class="" style="display:flex; align-items: center; background: #BBC2CB; height: 14rem; margin-top: 4rem;">
-  <img class="card-img sponsor-card-img block" src="img/logos/emory_lits_logo.svg" alt="" style="">
-  <img class="card-img sponsor-card-img block" src="img/logos/ucsc.svg" alt="" style="">
-  <img class="card-img sponsor-card-img block" src="img/logos/victoria.png" alt="" style="">
-  <img class="card-img sponsor-card-img block" src="img/logos/university-of-hull.svg" alt="" style="">
-  <img class="card-img sponsor-card-img block" src="img/logos/ufrj.svg" alt="" style="color: white; fill: white;">
-  <img class="card-img sponsor-card-img block" src="img/logos/hutchins.png" alt="" style="">
-  <img class="card-img sponsor-card-img block" src="img/logos/neh.png" alt="" style="">
+<div class="logo-grid-container" style="background: #BBC2CB; margin-top: 4rem;">
+  <div class="logo-grid">
+    <div class="logo-grid-item"><img class="card-img sponsor-card-img block" src="img/logos/emory_lits_logo.svg" alt="" style=""></div>
+    <div class="logo-grid-item"><img class="card-img sponsor-card-img block" src="img/logos/ucsc.svg" alt="" style=""></div>
+    <div class="logo-grid-item"><img class="card-img sponsor-card-img block" src="img/logos/victoria.png" alt="" style=""></div>
+    <div class="logo-grid-item"><img class="card-img sponsor-card-img block" src="img/logos/university-of-hull.svg" alt="" style=""></div>
+    <div class="logo-grid-item"><img class="card-img sponsor-card-img block" src="img/logos/ufrj.svg" alt="" style="color: white; fill2 white;"></div>
+    <div class="logo-grid-item"><img class="card-img sponsor-card-img block" src="img/logos/hutchins.png" alt="" style=""></div>
+    <div class="logo-grid-item"><img class="card-img sponsor-card-img block" src="img/logos/neh.png" alt="" style=""></div>
+  </div>
 </div>
 
-<footer class="footer-bottom" style="color: #efefef; background-color:#008ca8; ">
-  <div class="row" style="padding: 1rem 2rem;">
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+<footer class="footer-flex-container" style="color: #efefef; background-color:#008ca8; ">
+    <div class="footer-copyrights">
       <div class="copyright">
         <strong class="highlight">Slave Voyages</strong>
         <div class="highlight">Copyright 2017 Emory University. Software licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><span class="link" style="color: #eee;">GNU General Public License 3.0</span></a> or later version.</div>
@@ -688,12 +853,9 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-right">
-      <div class="design highlight">
-        <img src="img/emory_lits_logo.svg" class="footer-logo" style="height: 75px;">
-      </div>
+    <div class="footer-logo">
+      <img src="img/emory_lits_logo.svg" style="height: 75px;">
     </div>
-  </div>
 </footer>
 
   <!-- Optional JavaScript -->
@@ -701,6 +863,45 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+  <script>
+
+
+    // var reflow = function(){
+    //   var coverStartHeight = $(".cover-start").height();
+    //   var coverStartMarginTop = $(".cover-start").css("marginTop");
+    //   var coverStartMarginBtm = $(".cover-start").css("marginBottom");
+    //
+    //   var coverCenterHeight = $(".cover-center").height();
+    //   var coverCenterMarginTop = $(".cover-center").css("marginTop");
+    //   var coverCenterMarginBtm = $(".cover-center").css("marginBottom");
+    //
+    //   var coverEndHeight = $(".cover-end").height();
+    //   var coverEndMarginTop = $(".cover-end").css("marginTop");
+    //   var coverEndMarginBtm = $(".cover-end").css("marginBottom");
+    //
+    //   var bgvidHeight = coverStartHeight + coverCenterHeight + coverEndHeight + 250;
+    //   var window_height = $( window ).height();
+    //   var cover_height = $("#bgvid").height();
+    //
+    //   if (cover_height < window_height) {
+    //     var coverCenterMarginTop = window_height * 0.45;
+    //     var coverCenterMarginTop = $(".cover-center").css("marginTop", coverCenterMarginTop);
+    //     $("#bgvid").height(window_height);
+    //   } else {
+    //     $("#bgvid").height(bgvidHeight);
+    //   }
+    // }
+    //
+    // $( document ).ready( reflow );
+    //
+    //
+    // window.onresize = function() {
+    //   reflow();
+    // }
+
+</script>
+
 </body>
 
 </html>
