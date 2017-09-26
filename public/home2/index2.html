@@ -115,6 +115,15 @@
       width: 100%;
     }
 
+    .band-story {
+    }
+
+
+    .cover-flex-container {
+      margin-top: 10rem;
+    }
+
+
     .block {
       /*width: 100px;*/
       /*height: 100%;*/
@@ -229,8 +238,6 @@
     }
 
     .social-flex-container {
-      padding-top: 2rem;
-      padding-bottom: 1rem;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -250,20 +257,34 @@
     #bgvid-container {
       background: black;
       /*position: fixed;*/
-      width: 100%;
-      height: 100%;
+      /*width: 100%;*/
+      /*height: 100%;*/
       z-index: 0;
+      /*overflow: hidden;*/
+      object-fit: cover;
+      top: -2px;
       overflow: hidden;
+
     }
 
 
     video#bgvid {
       /*position: fixed;*/
-      min-width: 100%;
+      /*min-width: 100%;
+      max-width: 100%;
       min-height: 100%;
-      /*max-height: 100%;*/
-      /*width: auto;*/
-      height: auto;
+      max-height: 100%;*/
+      /*position: absolute;*/
+      /*top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;*/
+      /*border: 10px solid rgba(255, 255, 255, 0.5);
+      margin: 10px;*/
+      /*height: 100%;*/
+      /*width: 100%;*/
+      overflow-x: hidden;
+      /*width: 100%;*/
       z-index: 0;
       background-color: rgba(67, 45, 31, 1);
       opacity: .25;
@@ -290,9 +311,7 @@
     }
 
 
-    .cover-start {
-      margin-top: 10rem;
-    }
+
 
     .cover-center {
       margin-top: 6rem;
@@ -343,14 +362,21 @@
     }
     /* Large devices (desktops, 992px and up) */
 
+    .site-headline {
+      font-size: 2.5rem;
+    }
     /* original large device */
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .navbar-collapse {
         margin-top: 1rem;
         background: #38393B;
         opacity: 0.95;
         padding: 1rem;
         border-radius: 5px;
+      }
+
+      .site-headline {
+        font-size: 1.75rem;
       }
     }
 
@@ -359,17 +385,12 @@
       text-align: right;
     }
     @media (max-width: 992px) {
-      .site-headline {
-        font-size: 1.5rem;
-      }
+
 
       .site-story {
           /*font-size: 0.9rem;*/
       }
 
-      .cover-start {
-        margin-top: 8rem;
-      }
 
       .design {
         text-align: left;
@@ -378,19 +399,7 @@
 
     }
 
-  @media (max-width: 767px) {
-      .sm-hidden {
-        display: none;
-      }
 
-      .band {
-        margin: 1rem 0;
-      }
-
-      .col-md-4 .band {
-        margin: 0;
-      }
-    }
 
 
 
@@ -423,6 +432,7 @@
         display: flex!important;
       }
     }*/
+
 
     .sv-card-title {
       margin-left: 0.5rem;
@@ -507,7 +517,8 @@
       justify-content: space-between;
       flex-wrap: wrap;
       padding: 0 4rem;
-
+      color: #efefef;
+      background-color:#008ca8;
     }
 
     .footer-copyrights {
@@ -523,6 +534,84 @@
       margin: 1rem 0;
     }
 
+    .no-padding {
+      padding: 0;
+    }
+
+    @media (min-width: 576px) {
+      .band-story {
+        padding: 0;
+      }
+      /*.container {
+        max-width: none;
+      }*/
+    }
+
+    /*@media (min-width: 768px) {
+      .container {
+          max-width: 720px;
+      }
+    }*/
+
+    .band {
+      margin: 4rem 2rem;
+      align-items: center;
+    }
+
+
+
+    @media (max-width: 768px) {
+        .sm-hidden {
+          display: none;
+        }
+
+        .band-story {
+          padding: 0;
+        }
+
+        .cover-flex-container {
+          margin-top: 8rem;
+        }
+
+        .col-md-4 .band {
+          margin: 0;
+        }
+
+        .cover-band {
+          margin: 0 2rem;
+        }
+
+        .footer-flex-container {
+          padding: 0 2rem;
+          align-items: center;
+          text-align: center;
+        }
+
+        .footer-copyrights {
+          width: 100%;
+        }
+
+        .footer-logo {
+          margin: auto;
+        }
+
+        .navbar {
+          padding: 0 2rem;
+
+        }
+
+        .cover-start {
+
+        }
+        .cover-center {
+          margin-top: 2rem;
+        }
+
+        .site-story {
+          font-size: 1rem;
+        }
+      }
+
 
   </style>
 
@@ -533,7 +622,8 @@
 
   <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
     <div class="nav-container">
-      <a href="/" class="navbar-brand">Slave Voyages</a>
+      <!-- <a href="/" class="navbar-brand">Slave Voyages</a> -->
+      <a href="/" class="navbar-brand"><img src="img/logos/sv-logo.svg" alt="Slave Voyages" style="height: 3.5rem;"></a>
       <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar9">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -619,12 +709,12 @@
   <div id="bgvid-container">
 
 
-    <div class="align-items-center cover-band">
+    <div class=" cover-band">
 
       <div class="cover-flex-container">
 
         <div class="align-self-start cover-start">
-          <h1 class="uppercase cover-color weight-700 db-title site-headline">EXPLORE THE MOVEMENT OF SLAVES AROUND THE ATLANTIC WORLD</h1>
+          <h1 class="uppercase cover-color weight-700 db-title site-headline">EXPLORE THE MOVEMENT OF THE ENSLAVED AROUND THE ATLANTIC WORLD</h1>
           <p class="cover-color site-story">Over 12.5 million Africans were forcibly embarked for the Americas between the sixteenth and nineteenth centuries – the largest coerced movement of people in global history. Many thousands of the survivors experienced grueling additional
             journeys within the Americas. Drawing on extensive archival records, the three databases below provide details of 36,000 Trans-Atlantic and 10,000 Intra-American slave voyages, the names and personal details 92,000 captives in the slave
             trade.</p>
@@ -698,7 +788,7 @@
       <source src="http://lifepenpal.com/wp-content/uploads/2017/09/seq1.webm" type="video/webm">
       <!-- <source src="http://lifepenpal.com/wp-content/uploads/2017/09/seq2.webm" type="video/webm"> -->
 
-      <source src="/assets/videos/short-warp-2.mp4" type="video/mp4">
+      <!-- <source src="/assets/videos/short-warp-2.mp4" type="video/mp4"> -->
     </video>
 
   </div>
@@ -707,19 +797,19 @@
   <div class="container">
     <div class="row">
 
-      <div class="row align-items-center ">
-        <div class="col-md-8 band">
-          <div class="col align-self-start">
+      <div class="row band">
+        <div class="col-md-8 band-story">
+          <div class="align-self-start">
             <h1 class="uppercase trans-color weight-700 db-title">Trans-Atlantic</h1>
             <h1 class="uppercase db-title-color weight-700 db-title">Slave Trade Database</h1>
           </div>
-          <div class="col align-self-center">
+          <div class="align-self-center">
             <p class="trans-color">The Trans-Atlantic Slave Trade Database has information on almost 36,000 slaving voyages that forcibly embarked more than 12 million Africans for transportation to the Americas between the sixteenth and nineteenth centuries. Drawing from port
               records, merchant accounts, newspapers, and other primary sources, the database compiles information about slave trading routes, demographics, owners of ships, and enslaved people’s resistance. The database and a separate estimates interface
               offer scholarly researchers, students, and the general public a chance to discover the reality of the largest forced migration in world history.</p>
 
           </div>
-          <div class="col align-self-end band-buttons">
+          <div class="align-self-end band-buttons">
             <button class="btn btn-outline-primary trans-btn">About</button>
             <button class="btn btn-outline-primary trans-btn">Database</button>
             <button class="btn btn-outline-primary trans-btn">Estimates</button>
@@ -731,29 +821,29 @@
 
 
         </div>
-        <div class="col-md-4 band">
-          <img class="band-image sm-hidden" src="img/sv/trans1.png">
+        <div class="col-md-4 sm-hidden">
+          <img class="band-image" src="img/sv/trans1.png">
         </div>
       </div>
 
 
 
-      <div class="row align-items-center ">
-        <div class="col-md-4 band">
-          <img class="band-image sm-hidden" src="img/sv/intra3.png">
+      <div class="row band">
+        <div class="col-md-4 sm-hidden">
+          <img class="band-image" src="img/sv/intra3.png">
         </div>
-        <div class="col-md-8 band">
-          <div class="col align-self-start">
+        <div class="col-md-8 band-story">
+          <div class="align-self-start">
             <h1 class="uppercase intra-color weight-700 db-title">Intra-America</h1>
             <h1 class="uppercase db-title-color weight-700 db-title">Slave Trade Database</h1>
           </div>
-          <div class="col align-self-center">
+          <div class="align-self-center">
             <p class="intra-color">The Intra-American Slave Trade Database contains information on approximately 10,000 slave voyages within the Americas. These voyages operated within colonial empires, across imperial boundaries, and inside the borders of nations such as the
               United States and Brazil. The database enables users to explore the contours of this enormous New World slave trade, which not only dispersed African survivors of the Atlantic crossing but also displaced enslaved people born in the Americas.
             </p>
 
           </div>
-          <div class="col align-self-end band-buttons">
+          <div class="align-self-end band-buttons">
             <button class="btn btn-outline-primary intra-btn">About</button>
             <button class="btn btn-outline-primary intra-btn">Database</button>
             <button class="btn btn-outline-primary intra-btn">Downloads</button>
@@ -770,20 +860,20 @@
 
 
 
-      <div class="row align-items-center ">
+      <div class="row band">
 
 
-        <div class="col-md-8 band">
-          <div class="col align-self-start">
+        <div class="col-md-8 band-story">
+          <div class="align-self-start">
             <h1 class="uppercase past-color weight-700 db-title">People of Trans-Atlantic</h1>
             <h1 class="uppercase db-title-color weight-700 db-title"> Slave Trade</h1>
           </div>
-          <div class="col align-self-center">
+          <div class="align-self-center">
             <p class="past-color">People of the Atlantic Slave Trade provides personal details of 91,491 Africans taken from captured slave ships or from African trading sites. It displays the African name, age, gender, origin, country, and places of embarkation and disembarkation
               of each individual.</p>
 
           </div>
-          <div class="col align-self-end band-buttons">
+          <div class="align-self-end band-buttons">
             <button class="btn btn-outline-primary past-btn">About</button>
             <button class="btn btn-outline-primary past-btn">Database</button>
             <button class="btn btn-outline-primary past-btn">Downloads</button>
@@ -793,13 +883,13 @@
 
         </div>
 
-        <div class="col-md-4 band">
-          <img class="band-image sm-hidden" src="img/sv/past.png">
+        <div class="col-md-4 sm-hidden ">
+          <img class="band-image" src="img/sv/past.png">
         </div>
       </div>
 
-      <div class="row band">
-        <div class='col-md-12'>
+      <div class="row  band">
+        <div class='col-md-12 band-story'>
           <div class="align-self-start">
             <h1 class="uppercase gallery-color weight-700 db-title">Image Galleries</h1>
           </div>
@@ -853,27 +943,36 @@
       </div>
 
 
-
-      <div class="row align-items-center " style="margin: 4rem 0;">
-
-        <div class='col-md-12'>
-          <div class=" align-self-start">
-            <h1 class="uppercase normal-color weight-700 db-title">Resources and About</h1>
-          </div>
-          <div class=" align-self-center">
-            <p class="normal-color">Further explore the Atlantic slave trade using the links and lesson plans. Learn the history of the Slave Voyages project and contact the project’s editors.</p>
-          </div>
+      <div class="row  band">
+        <div class="col-md-4 sm-hidden">
+          <img class="band-image" src="img/sv/intra3.png">
         </div>
+        <div class="col-md-8 band-story">
+          <div class="align-self-start">
+            <h1 class="uppercase intra-color weight-700 db-title">Resources and About</h1>
+          </div>
+          <div class="align-self-center">
+            <p class="intra-color">Further explore the Atlantic slave trade using the links and lesson plans. Learn the history of the Slave Voyages project and contact the project’s editors.
+            </p>
+
+          </div>
+          <div class="align-self-end band-buttons">
+            <button class="btn btn-outline-primary intra-btn">About</button>
+            <button class="btn btn-outline-primary intra-btn">Database</button>
+            <button class="btn btn-outline-primary intra-btn">Downloads</button>
+            <button class="btn btn-outline-primary intra-btn">Contribute</button>
+          </div>
 
 
-
+        </div>
 
       </div>
 
 
 
 
-      <!-- <div class="row align-items-center ">
+
+      <!-- <div class="row  ">
 
           <div class="block">
           </div>
@@ -906,7 +1005,7 @@
   </div>
 </div>
 
-<footer class="footer-flex-container" style="color: #efefef; background-color:#008ca8; ">
+<footer class="footer-flex-container" style=" ">
     <div class="footer-copyrights">
       <div class="copyright">
         <strong class="highlight">Slave Voyages</strong>
@@ -947,15 +1046,43 @@
       var window_height = $( window ).height();
       var cover_height = $("#bgvid").height();
       var visible_height = $(window.top).height();
+      var coverEndHeight = $(".cover-end").height();
+      var coverStartBottom = $(".cover-start").position().top + $(".cover-start").height();
+      var coverCenterHeight = $(".cover-center").height();
 
-      $("#bgvid").height(coverBandHeight);
+      var offset = 32;
+
+
+
+      if (coverBandHeight > visible_height) {
+        $("#bgvid-container").height(coverBandHeight + offset);
+        $(".cover-center").css("marginTop", "1rem");
+      } else {
+        $("#bgvid-container").height(visible_height);
+        var coverCenterMarginTop = visible_height - coverStartBottom - offset - coverCenterHeight - coverEndHeight;
+        if (coverCenterMarginTop < 0) {
+          coverCenterMarginTop = 0;
+        }
+        // console.log("visible_height " + visible_height.toString());
+        // console.log("coverStartBottom " + coverStartBottom.toString());
+        // console.log("offset " + offset.toString());
+        // console.log("coverCenterHeight " + coverCenterHeight.toString());
+        $(".cover-center").css("marginTop", coverCenterMarginTop);
+      }
+      // if (coverBandHeight > cover_height) {
+      //   $("#bgvid").height(coverBandHeight);
+      // } else {
+      //   $("#bgvid").height(cover_height);
+      // }
+
+
     }
 
-    // $( document ).ready( reflow );
-    //
-    // window.onresize = function() {
-    //   reflow();
-    // }
+    $( document ).ready( reflow );
+
+    window.onresize = function() {
+      reflow();
+    }
 
 </script>
 
